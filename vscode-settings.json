@@ -1,0 +1,92 @@
+{
+  /* Workbench Settings */
+  "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.tree.indent": 15,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+
+  /* Editor Settings */
+  "editor.fontFamily": "Cascadia Code PL, monospace",
+  // Secondary font: "editor.fontFamily": "SF Mono, Menlo, Monospace"
+  "editor.fontSize": 12.5,
+  "editor.detectIndentation": true,
+  "editor.insertSpaces": false,
+  "editor.minimap.renderCharacters": false,
+  "editor.formatOnSave": true,
+  "editor.fontLigatures": true,
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnCommitCharacter": false,
+
+  /* Terminal Settings */
+  "terminal.integrated.fontFamily": "Cascadia Code PL, monospace",
+  "terminal.integrated.fontSize": 12.5,
+
+  /* Plugin-specific settings */
+  // Git
+  "git.confirmSync": false,
+
+  // Auto Close Tag
+  "auto-close-tag.SublimeText3Mode": true,
+
+  /* Language Specific Settings */
+  // C
+  "C_Cpp.default.cStandard": "gnu99",
+  "C_Cpp.autocompleteAddParentheses": true,
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
+  "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
+  "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, UseTab: Always, IndentWidth: 4, TabWidth: 4, ColumnLimit: 90}",
+
+  // Golang
+  "go.enableCodeLens": {
+    "references": true
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package",
+  "go.liveErrors": {
+    "enabled": false,
+    "delay": 500
+  },
+  "go.formatTool": "goimports",
+  "gitlens.advanced.messages": {
+    "suppressImproperWorkspaceCasingWarning": true
+  },
+
+  // TypeScript React
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+
+  // TypeScript
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+
+  // JavaScript React
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+
+  // jsonc
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "gruvboxMaterial.darkContrast": "hard",
+  "gruvboxMaterial.italicComments": false,
+  "latex-workshop.view.pdf.viewer": "tab"
+}
