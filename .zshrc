@@ -129,7 +129,7 @@ export NVM_DIR="$HOME/.nvm"
 
 alias vim="nvim"
 
-# For Xlaunch
+# For Xlaunch (Windows)
 export DISPLAY="`grep nameserver /etc/resolv.conf | sed 's/nameserver //'`:0"
 export DISPLAY="`sed -n 's/nameserver //p' /etc/resolv.conf`:0"
 export DISPLAY=$(ip route|awk '/^default/{print $3}'):0.0
