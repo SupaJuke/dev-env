@@ -1,5 +1,8 @@
 #!/bin/sh
 
+## !! From my brother, Nate !! ##
+## Source: https://github.com/natebwangsut ##
+
 #
 # Installing packages from brew
 #
