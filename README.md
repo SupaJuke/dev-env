@@ -1,4 +1,4 @@
-# Dev-Env
+# Supa's Development-Environment
 
 TODO:
 - write up proper installation guide
