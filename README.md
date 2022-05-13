@@ -1,6 +1,7 @@
 # Supa's Development-Environment
 
-TODO:
-- write up proper installation guide
-- nvim without brew
-- etc
+This is Supa's development environment, which mainly consists of the following configurations:
+1. omz
+2. nvim
+3. brew
+4. VSC
