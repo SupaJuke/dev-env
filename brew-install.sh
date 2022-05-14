@@ -3,10 +3,10 @@
 ## !! From my brother, Nate !! ##
 ## Source: https://github.com/natebwangsut ##
 
-#
-# Installing packages from brew
-#
+# Installing Brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+# Installing packages from brew
 brew update && brew upgrade
 
 ################################################################################
