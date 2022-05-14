@@ -7,8 +7,8 @@ require('gitsigns').setup()
 -- Status Line
 require('lualine').setup {
   options = {
-    icons_enabled = true,
-    theme = 'gruvbox',
+    icons_enabled = false,
+    theme = 'auto',
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {},
@@ -37,6 +37,7 @@ require('lualine').setup {
 
 -- Syntax Highlighter
 require 'nvim-treesitter.configs'.setup {
+  ensure_installed = { "c", "lua", "rust", "python" },
   highlight = {
     enable = true,
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
