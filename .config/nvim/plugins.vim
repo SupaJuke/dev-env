@@ -5,9 +5,6 @@ call plug#begin()
 " Theme
 Plug 'sainnhe/gruvbox-material'
 
-" Icons (PUT THIS LAST)
-Plug 'kyazdani42/nvim-web-devicons'
-
 " Status Line
 Plug 'nvim-lualine/lualine.nvim'
 
@@ -29,6 +26,12 @@ Plug 'tpope/vim-fugitive'
 
 " Startify
 Plug 'mhinz/vim-startify'
+
+" Devicon
+Plug 'ryanoasis/vim-devicons'
+
+" WebDevicon
+Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()
 
@@ -82,7 +85,7 @@ map <F5> :NERDTreeToggle<CR>
 "              \ | quit | endif
 
 " Map F5 to open NvimTree
-map <F5> :NvimTreeToggle<CR>
+" map <F5> :NvimTreeToggle<CR>
 
 " ========== Startify Settings ========== "
 
