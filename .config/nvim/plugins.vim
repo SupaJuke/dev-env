@@ -5,12 +5,15 @@ call plug#begin()
 " Theme
 Plug 'sainnhe/gruvbox-material'
 
+" Icons (PUT THIS LAST)
+Plug 'kyazdani42/nvim-web-devicons'
+
 " Status Line
 Plug 'nvim-lualine/lualine.nvim'
 
 " File Explorer
-" Plug 'kyazdani42/nvim-tree.lua'
 Plug 'preservim/nerdtree'
+"  Plug 'kyazdani42/nvim-tree.lua'
 
 " Bufferline (visual)
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
@@ -27,15 +30,11 @@ Plug 'tpope/vim-fugitive'
 " Startify
 Plug 'mhinz/vim-startify'
 
-" Icons (PUT THIS LAST)
-Plug 'kyazdani42/nvim-web-devicons'
-
 call plug#end()
-
 
 " ========== NERDTree Settings ========== "
 
-" Launching Startify & NERDTree
+"  Launching Startify & NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * 
             \   if argc() == 0 && !exists('s:std_in')
@@ -48,7 +47,7 @@ autocmd VimEnter *
             \ |   wincmd p
             \ | endif
 
-" Close tab if last window = NERDTree
+"  Close tab if last window = NERDTree
 autocmd BufEnter * 
             \ if winnr('$') == 1
             \ && exists('b:NERDTree')
@@ -56,8 +55,34 @@ autocmd BufEnter *
             \ | set guicursor=a:ver25-blinkon0
             \ | quit | endif
 
-" Map F5 to open NERDTree
+"  Map F5 to open NERDTree
 map <F5> :NERDTreeToggle<CR>
+
+" ========== NvimTree Settings ========== "
+
+" Launching Startify & NERDTree
+"  autocmd StdinReadPre * let s:std_in=1
+"  autocmd VimEnter * 
+"              \   if argc() == 0 && !exists('s:std_in')
+"              \ |   Startify
+"              \ |   NvimTreeFocus
+"              \ |   wincmd w
+"              \ | elseif argc() == 0 && exists('s:std_in')
+"              \ | elseif argc() > 0 || exists('s:std_in')
+"              \ |   NvimTreeFocus
+"              \ |   wincmd p
+"              \ | endif
+
+" Close tab if last window = NERDTree
+"  autocmd BufEnter * 
+"              \ if winnr('$') == 1
+"              \ && exists('b:NvimTree')
+"              \ && b:NvimTree.isTabTree()
+"              \ | set guicursor=a:ver25-blinkon0
+"              \ | quit | endif
+
+" Map F5 to open NvimTree
+map <F5> :NvimTreeToggle<CR>
 
 " ========== Startify Settings ========== "
 
@@ -80,15 +105,32 @@ let g:startify_lists = [
     \ ]
 
 let g:startify_custom_header = [
-    \'                                              ',
-    \'        ######  ##     ## ########     ###    ',
-    \'       ##    ## ##     ## ##     ##   ## ##   ',
-    \'       ##       ##     ## ##     ##  ##   ##  ',
-    \'        ######  ##     ## ########  ##     ## ',
-    \'             ## ##     ## ##        ######### ',
-    \'       ##    ## ##     ## ##        ##     ## ',
-    \'        ######   #######  ##        ##     ## ',
-    \'                                              ',
+    \'                                 ╒                               ',
+    \'                    ,╓µµ,         ▓╕                             ',
+    \'                 ,P`      ,▀g    ,▓▐█▌,,                         ',
+    \'                ▄     ,▄▄░▄&▐▒░░▒▒▒▒▒▒░░░░░░▒N╖   ,∞═**═∞,       ',
+    \'                ▌   ▄▓▒▓▀░▒▒▒▒▒▒▒▒▒▒▒░░░░░▒▒▒▒▒░▀▓▒.      \"W    ',
+    \'                ▌  .▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░▒▒▒▒▒▒▒▒▒░▀⌂,      ╚⌐   ',
+    \'                ▐ ░▄▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░▒▒▒▒▒▒▒▒▒▒▒▐▌▀▄     ▓   ',
+    \'                 ╙▓░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▐▌▒▌    ▓   ',
+    \'           \     ▐░▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▐▓░░░░,▌   ',
+    \'         ,▄╗,    ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒░▌▌▀░▄░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▀w░░▄▀    ',
+    \'    \`~   ▌░░⌠▀⌠F ▓▒▒▒▒▒▒▒▒▒▒▒▒░╝▐▀  ▄▓▌▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓╜      ',
+    \'       ` ╙▀░░░░▐ ╘W▒▒▒▒▒▒▒▒░Å╜         ▀^▀▄▒▒▒▒▒▒▒▒▒▒▒▒▒▒⌐       ',
+    \'          ▀╩╩æ╩   ▀░▒▒░▄P╩▀▄               ▀▄▒▒▒▒░▒▒▒▒▒▒▒U       ',
+    \'                   ▀▄▓▒` ╧   ╦        └▄ ` ╙╙▀▄░▒▒▒▒▒▒▒▒▐        ',
+    \'          ╓▄        ▐`  ██⌐  ▐       ▀▀    ⁿ∞  ▀▀▌▒▒▒▒▒▒▌  ╓╦B▓  ',
+    \'       ▐░▐░░▀┐      ╙J       ▀       ▓   ▐██⌐   M\"█╩▄▒░▀ \"▀▓▄▓▓',
+    \'        ▐▌╔φ▐    Æ&. ▓¥,,,,Æ`        ▐         Æ  ▌▌ Ü` ,Æ▐▓▓▓`  ',
+    \'         ▀∞     \"╚╩` ▐       ▐µ    ▄▄  ⁿ∞w,╓w∞╜     ▐▄Æ▓M╙▐▀    ',
+    \'   Tg                 ╙╦       ╓▀▒▀▒▐U          ▄███▓█▀          ',
+    \'   ░░▒        ,φ$Z` `""%IM-,     ╙╩╩▀        ,▄▀▀▄ë▀█▓,          ',
+    \'   ▄░U    ^   ▌═▓██     ``─░`└░TTMMMMm∞∞╤MMT▀▀ⁿ╨▀*╧Å▄█▓█▌═       ',
+    \'               ▀Ñ,                  ``````             ▀▀▄▄,     ',
+    \'        ╔░ ▄       ⁿ∞,      ▄▄▄▄╕ ▄▄▄▄▄▄          ▓▄▄▄▄▄▄▄▀`     ',
+    \'        \"\"\"`          ▓░    ,▄▄█▄   ▄█\"       ▄\ⁿ\"  ▀▀▀▀    ',
+    \'                     ╔          ▀  ▀          ▀                  ',
+    \'                                              ¬                  ',
     \ ]
 
 let g:startify_custom_footer = [
@@ -97,3 +139,5 @@ let g:startify_custom_footer = [
     \ '   | ---- Fredrich Neitzsche                                                     |',
     \ '   +-----------------------------------------------------------------------------+',
     \ ]
+
+" Placeholder

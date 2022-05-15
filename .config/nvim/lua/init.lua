@@ -7,7 +7,7 @@ require('gitsigns').setup()
 -- Status Line
 require('lualine').setup {
   options = {
-    icons_enabled = false,
+    icons_enabled = true,
     theme = 'auto',
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
@@ -36,7 +36,7 @@ require('lualine').setup {
 }
 
 -- Syntax Highlighter
-require 'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup {
   ensure_installed = { "c", "lua", "rust", "python" },
   highlight = {
     enable = true,
@@ -50,4 +50,7 @@ require 'nvim-treesitter.configs'.setup {
 
 -- Bufferline
 vim.opt.termguicolors = true
-require("bufferline").setup {}
+require "bufferline".setup {}
+
+-- NvimTree
+-- require 'nvim-tree'.setup {}

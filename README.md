@@ -6,6 +6,9 @@ This is Supa's development environment, which mainly consists of the following c
 3. [brew](https://brew.sh/) (for mac only)
 4. VSC
 
+## Requirements
+TODO
+
 ## TODO
 - install dependencies for `apt` (Ubuntu)
 - copy p10k configuration (and maybe for each OS -- linux/mac)
@@ -13,3 +16,6 @@ This is Supa's development environment, which mainly consists of the following c
 - install icons for NERDTree
 - file line for NERDTree
 - write 1 shell script that will call everything in order
+- latex installation (for both mac and linux)
+- font(?)
+- Treesitter settings
