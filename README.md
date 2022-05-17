@@ -19,3 +19,4 @@ TODO
 - latex installation (for both mac and linux)
 - font(?)
 - Treesitter settings
+- clean install vs existing install? (for example vimplug should only be installed when clean install)
