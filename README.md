@@ -20,3 +20,11 @@ TODO
 - font(?)
 - Treesitter settings
 - clean install vs existing install? (for example vimplug should only be installed when clean install)
+
+## Updates (23 May 2022)
+- Installed the following plugins:
+	- coc
+	- coc-tabnine
+	- fzf (on nvim)
+	- fzf-preview
+	- bat (better cat)
