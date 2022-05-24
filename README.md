@@ -13,12 +13,9 @@ TODO
 - install dependencies for `apt` (Ubuntu)
 - copy p10k configuration (and maybe for each OS -- linux/mac)
 - make VSC configuration more refined
-- install icons for NERDTree
 - file line for NERDTree
 - write 1 shell script that will call everything in order
 - latex installation (for both mac and linux)
-- font(?)
-- Treesitter settings
 - clean install vs existing install? (for example vimplug should only be installed when clean install)
 
 ## Updates (23 May 2022)

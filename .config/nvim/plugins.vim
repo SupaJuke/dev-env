@@ -18,6 +18,12 @@ Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 " Syntax Highlighting
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
+" Auto Completion
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
 " Git Decoration
 Plug 'lewis6991/gitsigns.nvim'
 
@@ -143,4 +149,7 @@ let g:startify_custom_footer = [
     \ '   +-----------------------------------------------------------------------------+',
     \ ]
 
-" Placeholder
+" ========== FZF Settings ========== "
+let g:fzf_preview_command = 'batcat --color=always --plain {-1}'
+let g:fzf_preview_lines_command = 'batcat --color=always --plain --number'
+let g:fzf_preview_use_dev_icons = 1
