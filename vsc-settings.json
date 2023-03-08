@@ -1,15 +1,11 @@
 {
-  /* Workbench Settings */
+  /* ===== Workbench Settings ===== */
   "workbench.colorTheme": "Gruvbox Material Dark",
-  "workbench.iconTheme": "Monokai Pro Icons",
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
   "workbench.tree.indent": 15,
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
 
-  /* Editor Settings */
-  "editor.fontFamily": "Cascadia Code PL, monospace",
-  // Secondary font: "editor.fontFamily": "SF Mono, Menlo, Monospace"
+  /* ===== Editor Settings ===== */
+  "editor.fontFamily": "Cascadia Code, CaskaydiaCove NF",
   "editor.fontSize": 12.5,
   "editor.detectIndentation": true,
   "editor.insertSpaces": false,
@@ -18,20 +14,27 @@
   "editor.fontLigatures": true,
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnCommitCharacter": false,
+  "editor.bracketPairColorization.enabled": false,
 
-  /* Terminal Settings */
-  "terminal.integrated.fontFamily": "Cascadia Code PL, monospace",
+  /* ===== Terminal Settings ===== */
+  "terminal.integrated.fontFamily": "CaskaydiaCove NF",
   "terminal.integrated.fontSize": 12.5,
+  "terminal.integrated.defaultProfile.linux": "zsh",
 
-  /* Plugin-specific settings */
+  /* ===== Plugin-specific settings ===== */
   // Git
   "git.confirmSync": false,
 
-  // Auto Close Tag
-  "auto-close-tag.SublimeText3Mode": true,
+  // Gruvbox Material
+  "gruvboxMaterial.darkContrast": "hard",
+  "gruvboxMaterial.darkSelection": "aqua",
+  "gruvboxMaterial.italicComments": false,
 
-  /* Language Specific Settings */
-  // C
+  // Latex Workshop
+  "latex-workshop.view.pdf.viewer": "tab",
+
+  /* ===== Language Specific Settings ===== */
+  // C & CPP
   "C_Cpp.default.cStandard": "gnu99",
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
@@ -42,9 +45,6 @@
   "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, UseTab: Always, IndentWidth: 4, TabWidth: 4, ColumnLimit: 90}",
 
   // Golang
-  "go.enableCodeLens": {
-    "references": true
-  },
   "go.lintTool": "golangci-lint",
   "go.lintOnSave": "package",
   "go.liveErrors": {
@@ -52,9 +52,6 @@
     "delay": 500
   },
   "go.formatTool": "goimports",
-  "gitlens.advanced.messages": {
-    "suppressImproperWorkspaceCasingWarning": true
-  },
 
   // TypeScript React
   "[typescriptreact]": {
@@ -74,7 +71,7 @@
     "editor.tabSize": 2
   },
 
-  // jsonc
+  // jsonc, js, yaml
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
@@ -84,9 +81,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "terminal.integrated.defaultProfile.linux": "zsh",
-  "gruvboxMaterial.darkContrast": "hard",
-  "gruvboxMaterial.italicComments": false,
-  "latex-workshop.view.pdf.viewer": "tab"
+  }
 }
