@@ -42,8 +42,8 @@ List of languages frequently used could be found in `lang-list.txt`.
 
 ### Abandoned
 
-- ~~[ ] copy p10k configuration (and maybe for each OS -- linux/mac)~~ -> too trivial, better to just do it on the fly
-- ~~[ ] clean install vs existing install? (for example vimplug should only be installed when clean install)~~
+- [ ] ~~copy p10k configuration (and maybe for each OS -- linux/mac)~~ -> too trivial, better to just do it on the fly
+- [ ] ~~clean install vs existing install? (for example vimplug should only be installed when clean install)~~
 
 ## Updates (23 May 2022)
 
