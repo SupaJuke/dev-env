@@ -1,11 +1,11 @@
 {
   /* ===== Workbench Settings ===== */
   "workbench.colorTheme": "Gruvbox Material Dark",
-  "workbench.iconTheme": "gruvbox-material-icon-theme",
   "workbench.tree.indent": 15,
 
   /* ===== Editor Settings ===== */
   "editor.fontFamily": "Cascadia Code, CaskaydiaCove NF",
+  // for mac: "editor.fontFamily": "Cascadia Code PL",
   "editor.fontSize": 12.5,
   "editor.detectIndentation": true,
   "editor.insertSpaces": false,
@@ -81,5 +81,13 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[go]": {
+    // "editor.formatOnSave": false
+  },
+  "[python]": {
+    "editor.formatOnType": true
+    // "editor.formatOnSave": false
+  },
+  "explorer.confirmDragAndDrop": false
 }

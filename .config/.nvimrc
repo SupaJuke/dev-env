@@ -1,1 +1,0 @@
-/home/supa7412/.config/nvim/
