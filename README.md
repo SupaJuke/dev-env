@@ -1,4 +1,4 @@
-# Supa's Development-Environment
+# Supa's Development Environment
 
 This is Supa's development environment, which mainly consists of the following configurations:
 
