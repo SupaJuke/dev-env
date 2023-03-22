@@ -54,3 +54,15 @@ require "bufferline".setup {}
 
 -- NvimTree
 -- require 'nvim-tree'.setup {}
+
+-- Telescope
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+
+require('telescope').load_extension('fzf')
+
+-- Coc Autocomplete
+local keyset = vim.keymap.set
+local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
+keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)

@@ -24,11 +24,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+" Telescope
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.1' }
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+
 " Git Decoration
 Plug 'lewis6991/gitsigns.nvim'
-
-" Fugitive
-Plug 'tpope/vim-fugitive'
 
 " Startify
 Plug 'mhinz/vim-startify'
@@ -66,6 +68,9 @@ autocmd BufEnter *
 
 "  Map F5 to open NERDTree
 map <F5> :NERDTreeToggle<CR>
+
+" NERDTree always shows hidden files
+let NERDTreeShowHidden=0
 
 " ========== NvimTree Settings ========== "
 
@@ -148,8 +153,3 @@ let g:startify_custom_footer = [
     \ '   | ---- Fredrich Neitzsche                                                     |',
     \ '   +-----------------------------------------------------------------------------+',
     \ ]
-
-" ========== FZF Settings ========== "
-let g:fzf_preview_command = 'batcat --color=always --plain {-1}'
-let g:fzf_preview_lines_command = 'batcat --color=always --plain --number'
-let g:fzf_preview_use_dev_icons = 1

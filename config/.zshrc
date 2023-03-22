@@ -7,9 +7,11 @@ fi
 
 # ------------------------------ Settings ------------------------------ #
 
+export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export ZSH="/home/supa7412/.oh-my-zsh"
 export MANPAGER='nvim +Man!'
+export BAT_THEME="base16"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -30,5 +32,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # ------------------------------ Aliasing ------------------------------ #
-alias vim="nvim"
-alias bat="batcat"
+
+if [[ $OSTYPE =~ 'linux' ]]
+then
+	alias bat="batcat"
+fi

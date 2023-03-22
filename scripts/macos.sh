@@ -21,7 +21,7 @@ brew install coreutils
 brew install nvim
 brew install wget
 brew install ripgrep
-
+brew install ffmpeg
 brew install gnu-sed
 
 # Containers
@@ -31,8 +31,6 @@ brew install kubectl
 
 # Development
 brew install go
-
 brew install python
-
 brew install node
 brew install typescript
