@@ -14,6 +14,7 @@ source /usr/share/zsh/functions/Completion/Debian/_apt-fast
 echo $PWD | sudo -Sk apt-fast install -y texlive-latex-extra
 echo $PWD | sudo -Sk apt-fast install -y bat
 echo $PWD | sudo -Sk apt-fast install -y ca-certificates
+echo $PWD | sudo -Sk apt-fast install -y fzf
 
 # Install Neovim
 wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb

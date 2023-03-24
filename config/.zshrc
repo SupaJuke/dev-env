@@ -12,14 +12,13 @@ export PATH="$PATH:/usr/local/go/bin"
 export ZSH="/home/supa7412/.oh-my-zsh"
 export MANPAGER='nvim +Man!'
 export BAT_THEME="base16"
-
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
 	git
+	docker
 	zsh-autosuggestions
 	zsh-syntax-highlighting
-	docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -27,9 +26,42 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+#NVM
+lazynvm() {
+  	unset -f nvm node npm npx yarn nvim
+  	export NVM_DIR=~/.nvm
+  	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+}
+
+nvm() {
+    lazynvm 
+    nvm $@
+}
+
+node() {
+    lazynvm
+    node $@
+}
+
+npm() {
+    lazynvm
+    npm $@
+}
+
+npx() {
+    lazynvm
+    npx $@
+}
+
+yarn() {
+    lazynvm
+    yarn $@
+}
+
+nvim() {
+    lazynvm
+    nvim $@
+}
 
 # ------------------------------ Aliasing ------------------------------ #
 
