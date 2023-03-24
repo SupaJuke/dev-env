@@ -41,3 +41,4 @@ set cursorline
 
 " Change PWD
 autocmd BufEnter * silent! lcd %:p:h
+au VimLeave * set guicursor=a:ver25-blinkon175
