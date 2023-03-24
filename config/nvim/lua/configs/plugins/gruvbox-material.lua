@@ -17,11 +17,12 @@ function M.setup()
 				autocmd!
 				autocmd ColorScheme gruvbox-material call s:gruvbox_material_custom()
 			augroup END
+
+            set background=dark
+            let g:gruvbox_material_background = 'hard'
+            colorscheme gruvbox-material
 		]]
 	)
-	vim.cmd([[set background=dark]])
-	vim.cmd([[let g:gruvbox_material_background = 'hard']])
-	vim.cmd([[colorscheme gruvbox-material]])
 end
 
 return M
