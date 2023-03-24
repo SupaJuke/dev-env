@@ -8,4 +8,4 @@ then
 	rm -rf ~/.config/nvim
 fi
 
-cp -r config/nvim ~/.config/nvim
+ln -s "$HOME/.dev-env/config/nvim" "$HOME/.config/nvim"
