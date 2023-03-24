@@ -1,3 +1,8 @@
+" ====================== DEPRECATED ====================== "
+" ========= PLEASE READ lua/plugins.lua INSTEAD ========== "
+
+
+
 " ========== Plugins ========== "
 
 call plug#begin()

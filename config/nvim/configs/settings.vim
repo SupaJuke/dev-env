@@ -4,6 +4,9 @@ set guicursor=n-v:block,i-c-ci-ve:ver25,r-cr:hor20,o:hor50
 			\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
 			\,sm:block-blinkwait175-blinkoff150-blinkon175
 
+" Return cursor once leave -> only for windows
+" au VimLeave * set guicursor=a:ver25-blinkon175
+
 " ========== Other Settings ========== "
 
 " Enable syntax highlighting
@@ -41,4 +44,17 @@ set cursorline
 
 " Change PWD
 autocmd BufEnter * silent! lcd %:p:h
-au VimLeave * set guicursor=a:ver25-blinkon175
+
+" Yanking
+let g:clipboard = {
+            \   'name': 'WslClipboard',
+            \   'copy': {
+            \      '+': 'clip.exe',
+            \      '*': 'clip.exe',
+            \    },
+            \   'paste': {
+            \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \   },
+            \   'cache_enabled': 0,
+            \ }

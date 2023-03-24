@@ -30,7 +30,14 @@ return {
     'akinsho/bufferline.nvim',
     version = "v3.*",
     config = function()
-      require("bufferline").setup()
+      require("bufferline").setup{
+        highlights = {
+          fill = {
+            -- bg = '#1D2021'
+            bg = '#1a1c1d'
+          },
+        }
+      }
     end
   },
 
