@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Updating Dependencies
 echo $1 | sudo -Sk apt-get update
 

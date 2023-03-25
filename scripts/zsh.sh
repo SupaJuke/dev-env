@@ -1,9 +1,4 @@
-# Installing ZSH for Ubuntu
-if [[ $OSTYPE =~ 'linux' ]]
-then
-    echo $1 | sudo -Sk apt-get install zsh
-fi
-
+#!/bin/zsh
 
 # Installing OMZ
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -12,6 +7,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+# Removing old .zshrc
+if [[ -f "$HOME/.zshrc" ]]
+then
+    rm "$HOME/.zshrc"
+fi
 
 # Symlinking
 ln -s "$PWD/.dev-env/config/.zshrc" "$HOME/.zshrc"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 ## !! From my brother, Nate !! ##
 ## Source: https://github.com/natebwangsut ##
