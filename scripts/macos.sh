@@ -24,6 +24,7 @@ brew install ripgrep
 brew install ffmpeg
 brew install gnu-sed
 brew install fzf
+brew install make
 
 # Containers
 brew install helm
