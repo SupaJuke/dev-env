@@ -1,3 +1,10 @@
+# Installing ZSH for Ubuntu
+if [[ $OSTYPE =~ 'linux' ]]
+then
+    echo $1 | sudo -Sk apt-get install zsh
+fi
+
+
 # Installing OMZ
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 

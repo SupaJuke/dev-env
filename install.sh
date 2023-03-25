@@ -8,7 +8,7 @@ fi
 
 ## --------------- Setting up ZSH ------------------ ##
 
-./scripts/zsh.sh
+./scripts/zsh.sh $1
 
 ## --------------- Setting up System --------------- ##
 
