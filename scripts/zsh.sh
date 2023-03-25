@@ -18,4 +18,4 @@ then
 fi
 
 # Symlinking
-ln -s "$PWD/config/zshrc" "$HOME/.zshrc"
+ln -s "$PWD/config/.zshrc" "$HOME/.zshrc"
