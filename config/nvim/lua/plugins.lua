@@ -19,7 +19,7 @@ return {
 
   {
     'nvim-lualine/lualine.nvim',
-    lazy = true,
+    lazy = false,
     config = function()
       require('configs.plugins.lualine').setup()
     end
@@ -38,7 +38,7 @@ return {
 
   {
     'akinsho/bufferline.nvim',
-    lazy = true,
+    lazy = false,
     version = "v3.*",
     config = function()
       require("configs.plugins.bufferline").setup()
@@ -47,7 +47,7 @@ return {
 
   {
     'nvim-treesitter/nvim-treesitter',
-    lazy = true,
+    lazy = false,
     build = ':TSUpdate',
     config = function()
       require('configs.plugins.nvim-treesitter').setup()
@@ -56,7 +56,7 @@ return {
 
   {
     'neoclide/coc.nvim',
-    lazy = true,
+    lazy = false,
     branch = 'release',
     config = function()
       require('configs.plugins.coc').setup()
