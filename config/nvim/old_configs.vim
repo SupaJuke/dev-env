@@ -1,7 +1,82 @@
 " ====================== DEPRECATED ====================== "
 " ========= PLEASE READ lua/plugins.lua INSTEAD ========== "
+" ======================================================== "
 
+" ========== Indentation Settings ========== "
 
+" Default Settings
+set expandtab
+set tabstop=4
+set shiftwidth=4
+"  set autoindent
+"  set smartindent
+"  set smarttab
+set shiftround
+"  set preserveindent
+
+" Dectecting filetype & indentation of the file
+filetype plugin indent on
+
+" ========== Cursor Settings ========== "
+
+set guicursor=n-v:block,i-c-ci-ve:ver25,r-cr:hor20,o:hor50
+			\,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+			\,sm:block-blinkwait175-blinkoff150-blinkon175
+
+" Return cursor once leave -> only for windows
+" au VimLeave * set guicursor=a:ver25-blinkon175
+
+" ========== Other Settings ========== "
+
+" Enable syntax highlighting
+syntax enable
+
+" If text goes beyond terminal
+set wrap
+
+" Show smth
+set showmode showcmd
+
+" Line number
+set number ruler
+
+" Matching bracket
+set showmatch
+
+" Maintain terminal (instead of terminating)
+set hidden
+
+" Split right
+set splitright
+
+" Backspace
+set backspace=indent,eol,start
+
+" Mouse movement
+set mouse=a
+
+" Case insensitive search
+set ignorecase smartcase
+
+" Highlight current line
+set cursorline
+
+" Change PWD
+autocmd BufEnter * silent! lcd %:p:h
+
+" Yanking
+let g:clipboard = {
+            \   'name': 'WslClipboard',
+            \   'copy': {
+            \      '+': 'clip.exe',
+            \      '*': 'clip.exe',
+            \    },
+            \   'paste': {
+            \      '+': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \      '*': 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+            \   },
+            \   'cache_enabled': 0,
+            \ }
 
 " ========== Plugins ========== "
 
@@ -76,32 +151,6 @@ map <F5> :NERDTreeToggle<CR>
 
 " NERDTree always shows hidden files
 let NERDTreeShowHidden=0
-
-" ========== NvimTree Settings ========== "
-
-" Launching Startify & NERDTree
-"  autocmd StdinReadPre * let s:std_in=1
-"  autocmd VimEnter * 
-"              \   if argc() == 0 && !exists('s:std_in')
-"              \ |   Startify
-"              \ |   NvimTreeFocus
-"              \ |   wincmd w
-"              \ | elseif argc() == 0 && exists('s:std_in')
-"              \ | elseif argc() > 0 || exists('s:std_in')
-"              \ |   NvimTreeFocus
-"              \ |   wincmd p
-"              \ | endif
-
-" Close tab if last window = NERDTree
-"  autocmd BufEnter * 
-"              \ if winnr('$') == 1
-"              \ && exists('b:NvimTree')
-"              \ && b:NvimTree.isTabTree()
-"              \ | set guicursor=a:ver25-blinkon0
-"              \ | quit | endif
-
-" Map F5 to open NvimTree
-" map <F5> :NvimTreeToggle<CR>
 
 " ========== Startify Settings ========== "
 

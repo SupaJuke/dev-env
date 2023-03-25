@@ -2,15 +2,17 @@
 
 This is Supa's development environment, which mainly consists of the following configurations:
 
-- [Oh My Zsh](https://ohmyz.sh/)
+- [ZSH](https://www.zsh.org/) with [Oh My Zsh](https://ohmyz.sh/)
 - [Neovim](https://neovim.io/)
-- [Brew](https://brew.sh/) (for mac only)
+- [Brew](https://brew.sh/) (for Mac only)
+- [Apt](https://ubuntu.com/server/docs/package-management) (for Ubuntu only)
 - [Visual Studio Code](https://code.visualstudio.com/)
 
 ## Requirements
 
 - ZSH (5.8.1+)
 - Git (2.35.1+)
+- curl
 
 ## Installation
 
@@ -26,26 +28,28 @@ List of languages frequently used could be found in `lang-list.txt`.
 
 - [x] write 1 shell script that will call everything in order
 - [x] make VSC configuration more refined
+- [x] install dependencies for `apt` (Ubuntu)
+- [x] Setup Neoivm plugins automatically -> ~~[read](https://stackoverflow.com/questions/13522599/how-to-run-vim-commands-from-terminal)~~ Used Lazy to automatically install everything on first run
 
 ### In progress
 
-23 May 2022
+**May 2022**
 
-- [ ] install dependencies for `apt` (Ubuntu)
-- [ ] latex installation (for both mac and linux)
-- [ ] file line for NERDTree -> might not happen as we might move to [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- [ ] latex installation (for both mac and ~~linux~~)
 
-21 March 2023
+**March 2023**
 
-- [ ] Setup Neoivm plugins automatically -> [read](https://stackoverflow.com/questions/13522599/how-to-run-vim-commands-from-terminal)
 - [ ] Migrate from vim-plug to lazy.nvim
 
 ### Abandoned
 
-- [ ] ~~copy p10k configuration (and maybe for each OS -- linux/mac)~~ -> too trivial, better to just do it on the fly
-- [ ] ~~clean install vs existing install? (for example vimplug should only be installed when clean install)~~
+- ~~copy p10k configuration (and maybe for each OS -- linux/mac)~~ -> too trivial, better to just do it on the fly
+- ~~clean install vs existing install? (for example vimplug should only be installed when clean install)~~
+- ~~file line for NERDTree -> might not happen as we might~~ moved to [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 
-## Updates (23 May 2022)
+## Change Logs
+
+### V1 (May 2022)
 
 - Installed the following plugins:
   - coc
@@ -54,9 +58,11 @@ List of languages frequently used could be found in `lang-list.txt`.
   - fzf-preview -> ignore?
   - bat (better cat)
 
-## Updates (21 March 2023)
+### V2 (March 2023)
 
-- Removed Neovim configs from repo
+- ~~Removed Neovim configs from repo~~
+- Fully migrate to Lua and Lazy (instead of VimPlug)
 - Restructured folders
 - Implemented `install.sh` as a one-stop service
+- Now using symlink with configs (`.config/nvim` and `.zshrc`)
 - Updated `README.md`

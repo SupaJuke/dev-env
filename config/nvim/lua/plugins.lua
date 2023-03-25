@@ -9,6 +9,15 @@ return {
   },
 
   {
+    'sainnhe/everforest',
+    lazy = false,
+    priority = 999,
+    config = function()
+      require('configs.plugins.everforest').setup()
+    end,
+  },
+
+  {
     'nvim-lualine/lualine.nvim',
     config = function()
       require('configs.plugins.lualine').setup()
@@ -30,14 +39,7 @@ return {
     'akinsho/bufferline.nvim',
     version = "v3.*",
     config = function()
-      require("bufferline").setup{
-        highlights = {
-          fill = {
-            -- bg = '#1D2021'
-            bg = '#1a1c1d'
-          },
-        }
-      }
+      require("configs.plugins.bufferline").setup()
     end
   },
 

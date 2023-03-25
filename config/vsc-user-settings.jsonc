@@ -1,11 +1,14 @@
 {
   /* ===== Workbench Settings ===== */
-  "workbench.colorTheme": "Gruvbox Material Dark",
+  // "workbench.colorTheme": "Gruvbox Material Dark",
+  "workbench.colorTheme": "Everforest Dark",
   "workbench.tree.indent": 15,
+  "workbench.colorCustomizations": {
+    "editorWhitespace.foreground": "#4F5B58" // everforest
+  },
 
   /* ===== Editor Settings ===== */
   "editor.fontFamily": "Cascadia Code, CaskaydiaCove NF",
-  // for mac: "editor.fontFamily": "Cascadia Code PL",
   "editor.fontSize": 12.5,
   "editor.detectIndentation": true,
   "editor.insertSpaces": false,
@@ -15,9 +18,10 @@
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": false,
+  "explorer.confirmDragAndDrop": false,
 
   /* ===== Terminal Settings ===== */
-  "terminal.integrated.fontFamily": "CaskaydiaCove NF",
+  "terminal.integrated.fontFamily": "Cascadia Code, CaskaydiaCove NF",
   "terminal.integrated.fontSize": 12.5,
   "terminal.integrated.defaultProfile.linux": "zsh",
 
@@ -29,6 +33,11 @@
   "gruvboxMaterial.darkContrast": "hard",
   "gruvboxMaterial.darkSelection": "aqua",
   "gruvboxMaterial.italicComments": false,
+
+  // Everforest
+  "everforest.darkContrast": "hard",
+  "everforest.darkSelection": "aqua",
+  "everforest.italicComments": false,
 
   // Latex Workshop
   "latex-workshop.view.pdf.viewer": "tab",
@@ -52,6 +61,9 @@
     "delay": 500
   },
   "go.formatTool": "goimports",
+
+  // Lua
+  "Lua.codeLens.enable": true,
 
   // TypeScript React
   "[typescriptreact]": {
@@ -88,6 +100,5 @@
   "[python]": {
     "editor.formatOnType": true
     // "editor.formatOnSave": false
-  },
-  "explorer.confirmDragAndDrop": false
+  }
 }

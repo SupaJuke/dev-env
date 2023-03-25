@@ -8,7 +8,7 @@ fi
 
 ## --------------- Setting up ZSH ------------------ ##
 
-./scripts/omz.sh
+./scripts/zsh.sh
 ln -s "$HOME/.dev-env/config/.zshrc" "$HOME/.zshrc"
 
 ## --------------- Setting up System --------------- ##

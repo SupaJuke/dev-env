@@ -3,7 +3,7 @@ local M = {}
 function M.setup()
   vim.cmd(
     [[
-        function! s:gruvbox_material_custom() abort
+        function! s:everforest_custom() abort
             highlight! link NvimTreeNormal Normal
             highlight! link NvimTreeEndofBuffer EndOfBuffer
             highlight! link NvimTreeCursorLine CursorLine
@@ -13,13 +13,13 @@ function M.setup()
             highlight! link NvimTreeCursorColumn CursorColumn
         endfunction
 
-        augroup GruvboxMaterialCustom
+        augroup EverforestCustom
             autocmd!
-            autocmd ColorScheme gruvbox-material call s:gruvbox_material_custom()
+            autocmd ColorScheme everforest call s:everforest_custom()
         augroup END
 
-        let g:gruvbox_material_background = 'hard'
-        " colorscheme gruvbox-material
+        let g:everforest_background = 'hard'
+        " colorscheme everforest
     ]]
   )
 end
