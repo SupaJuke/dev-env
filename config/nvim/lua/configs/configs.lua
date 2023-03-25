@@ -2,6 +2,7 @@ local M = {}
 
 function M.setup()
   local set = vim.opt
+  local autocmd = vim.api.nvim_create_autocmd
 
   -- ==================== Theme Settings ==================== --
 
@@ -70,7 +71,29 @@ function M.setup()
   set.cursorline = true
 
   -- Change PWD
-  vim.cmd('autocmd BufEnter * silent! lcd %:p:h')
+  -- vim.cmd('autocmd BufEnter * silent! lcd %:p:h')
+  -- autocmd("BufEnter", {
+  --   pattern = "*",
+  --   command = "silent! lcd %:p:h'"
+  -- })
+
+  -- Start Neovim with Alpha and NvimTree
+  local function start_nvim(data)
+    -- Buffer is a directory
+    local directory = vim.fn.isdirectory(data.file) == 1
+
+    if not directory then
+      return
+    end
+
+    -- Change to the directory
+    vim.cmd.cd(data.file)
+
+    -- Open the tree
+    vim.cmd("Alpha")
+    require("nvim-tree.api").tree.open()
+  end
+  autocmd({ "VimEnter" }, { callback = start_nvim })
 
   -- Yanking
   vim.g.clipboard = {

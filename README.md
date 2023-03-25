@@ -18,7 +18,9 @@ This is Supa's development environment, which mainly consists of the following c
 
 Run `install.sh`. That should handle most stuffs.
 
-For Neovim plugins, run `nvim`. Once inside, run `:PlugInstall` to install all plugins. For specific plugin configs (Treesitter & Coc), do `TSInstall <language>` and `CocInstall <language>`.
+For Neovim plugins, run `nvim`.  
+~~Once inside, run `:PlugInstall` to install all plugins. For specific plugin configs (Treesitter & Coc), do `TSInstall <language>` and `CocInstall <language>`.~~  
+The installation process will automatically start, including extensions for `treesitter` and `coc`.
 
 List of languages frequently used could be found in `lang-list.txt`.
 

@@ -1,7 +1,7 @@
 return {
   {
     'sainnhe/gruvbox-material',
-    lazy = false,
+    lazy = true,
     priority = 1000,
     config = function()
       require('configs.plugins.gruvbox-material').setup()
@@ -19,6 +19,7 @@ return {
 
   {
     'nvim-lualine/lualine.nvim',
+    lazy = true,
     config = function()
       require('configs.plugins.lualine').setup()
     end
@@ -37,6 +38,7 @@ return {
 
   {
     'akinsho/bufferline.nvim',
+    lazy = true,
     version = "v3.*",
     config = function()
       require("configs.plugins.bufferline").setup()
@@ -45,6 +47,7 @@ return {
 
   {
     'nvim-treesitter/nvim-treesitter',
+    lazy = true,
     build = ':TSUpdate',
     config = function()
       require('configs.plugins.nvim-treesitter').setup()
@@ -53,6 +56,7 @@ return {
 
   {
     'neoclide/coc.nvim',
+    lazy = true,
     branch = 'release',
     config = function()
       require('configs.plugins.coc').setup()
@@ -61,6 +65,7 @@ return {
 
   {
     'nvim-telescope/telescope.nvim',
+    lazy = true,
     tag = '0.1.1',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
@@ -70,6 +75,7 @@ return {
 
   {
     "nvim-telescope/telescope-file-browser.nvim",
+    lazy = true,
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function()
       require('configs.plugins.telescope-file-browser').setup()
@@ -78,11 +84,13 @@ return {
 
   {
     'nvim-telescope/telescope-fzf-native.nvim',
+    lazy = true,
     build = 'make'
   },
 
   {
     'lewis6991/gitsigns.nvim',
+    lazy = true,
     tag = 'release',
     config = function()
       require('gitsigns').setup()
@@ -98,6 +106,7 @@ return {
 
   {
     "nvim-tree/nvim-web-devicons",
+    lazy = true,
     config = function()
       require 'nvim-web-devicons'.get_icons()
     end
