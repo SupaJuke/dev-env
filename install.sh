@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-## --------------- Initializing variables ------------------ ##
+## ------------ Initializing variables ------------- ##
 
 if [[ $# -ne 1 ]]
 then
@@ -25,3 +25,7 @@ fi
 ## --------------- Setting up Neovim --------------- ##
 
 ./scripts/nvim.sh
+
+## ---------------- Sourcing .zshrc ---------------- ##
+
+exec zsh

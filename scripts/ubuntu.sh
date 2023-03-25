@@ -19,6 +19,8 @@ echo $1 | sudo -Sk apt-fast install -y bat
 echo $1 | sudo -Sk apt-fast install -y ca-certificates
 echo $1 | sudo -Sk apt-fast install -y fzf
 echo $1 | sudo -Sk apt-fast install -y make
+echo $1 | sudo -Sk apt-fast install -y gcc
+
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
 echo $1 | sudo -Sk apt install -y ./ripgrep_13.0.0_amd64.deb  # (for Telescope)
 
@@ -28,3 +30,6 @@ echo $1 | sudo -Sk apt install -y ./ripgrep_13.0.0_amd64.deb  # (for Telescope)
 # Install Neovim
 wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
 echo $1 | sudo -Sk apt install -y ./nvim-linux64.deb
+
+# Clean Up Artifacts
+rm ripgrep*.deb nvim*.deb
