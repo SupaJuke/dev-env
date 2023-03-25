@@ -9,7 +9,6 @@ fi
 ## --------------- Setting up ZSH ------------------ ##
 
 ./scripts/zsh.sh
-ln -s "$HOME/.dev-env/config/.zshrc" "$HOME/.zshrc"
 
 ## --------------- Setting up System --------------- ##
 
@@ -24,6 +23,3 @@ fi
 ## --------------- Setting up Neovim --------------- ##
 
 ./scripts/nvim.sh
-
-# NOTE: Still have to run PlugInstall manually
-# And other plugins setups -> TSInstall; CocInstall
