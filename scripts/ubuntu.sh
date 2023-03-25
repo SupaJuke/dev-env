@@ -20,6 +20,7 @@ echo $1 | sudo -Sk apt-fast install -y ca-certificates
 echo $1 | sudo -Sk apt-fast install -y fzf
 echo $1 | sudo -Sk apt-fast install -y make
 echo $1 | sudo -Sk apt-fast install -y gcc
+echo $1 | sudo -Sk apt-fast install -y g++
 
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
 echo $1 | sudo -Sk apt install -y ./ripgrep_13.0.0_amd64.deb  # (for Telescope)
