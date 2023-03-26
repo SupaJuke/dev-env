@@ -1,12 +1,14 @@
 # Supa's Development Environment
 
-This is Supa's development environment, which mainly consists of the following configurations:
+This is Supa's development environment, which mainly consists of the followings:
 
 - [ZSH](https://www.zsh.org/) with [Oh My Zsh](https://ohmyz.sh/)
 - [Neovim](https://neovim.io/)
 - [Brew](https://brew.sh/) (for Mac only)
 - [Apt](https://ubuntu.com/server/docs/package-management) (for Ubuntu only)
 - [Visual Studio Code](https://code.visualstudio.com/)
+
+---
 
 ## Requirements
 
@@ -16,13 +18,15 @@ This is Supa's development environment, which mainly consists of the following c
 
 ## Installation
 
-Run `install.sh`. That should handle most stuffs.
+Run `install.sh`. That should handle most stuffs. This will also trigger `p10k` configuration wizard to start after installing all dependencies.
 
-For Neovim plugins, run `nvim`.  
-~~Once inside, run `:PlugInstall` to install all plugins. For specific plugin configs (Treesitter & Coc), do `TSInstall <language>` and `CocInstall <language>`.~~  
-The installation process will automatically start, including extensions for `treesitter` and `coc`.
+~~For Neovim plugins, run `nvim`. Once inside, run `:PlugInstall` to install all plugins. For specific plugin configs (Treesitter & Coc), do `TSInstall <language>` and `CocInstall <language>`.~~
+
+Before running `nvim`, make sure to install `node` (e.g. `nvm install --lts`). Then, you could run `nvim`, which will automatically install the plugins, including extensions for `treesitter` and `coc`.
 
 List of languages frequently used could be found in `lang-list.txt`.
+
+---
 
 ## TODO
 
@@ -31,6 +35,7 @@ List of languages frequently used could be found in `lang-list.txt`.
 - [x] write 1 shell script that will call everything in order
 - [x] make VSC configuration more refined
 - [x] install dependencies for `apt` (Ubuntu)
+- [x] Migrate from vim-plug to lazy.nvim
 - [x] Setup Neoivm plugins automatically -> ~~[read](https://stackoverflow.com/questions/13522599/how-to-run-vim-commands-from-terminal)~~ Used Lazy to automatically install everything on first run
 
 ### In progress
@@ -41,13 +46,15 @@ List of languages frequently used could be found in `lang-list.txt`.
 
 **March 2023**
 
-- [ ] Migrate from vim-plug to lazy.nvim
+- [ ] test running `install.sh` on Macos
 
 ### Abandoned
 
 - ~~copy p10k configuration (and maybe for each OS -- linux/mac)~~ -> too trivial, better to just do it on the fly
 - ~~clean install vs existing install? (for example vimplug should only be installed when clean install)~~
 - ~~file line for NERDTree -> might not happen as we might~~ moved to [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+
+---
 
 ## Change Logs
 
@@ -62,9 +69,14 @@ List of languages frequently used could be found in `lang-list.txt`.
 
 ### V2 (March 2023)
 
-- ~~Removed Neovim configs from repo~~
-- Fully migrate to Lua and Lazy (instead of VimPlug)
-- Restructured folders
+**Main features**
+
 - Implemented `install.sh` as a one-stop service
-- Now using symlink with configs (`.config/nvim` and `.zshrc`)
+- Fully migrated to Lua and Lazy (instead of VimPlug)
+- Tested the installation process on Ubuntu (22.04)
+
+**Other features**
+
 - Updated `README.md`
+- Now using symlink with configs (`.config/nvim` and `.zshrc`)
+- Restructured folders
