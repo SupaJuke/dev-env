@@ -56,7 +56,7 @@ return {
 
   {
     'neoclide/coc.nvim',
-    lazy = false,
+    lazy = true,
     branch = 'release',
     config = function()
       require('configs.plugins.coc').setup()

@@ -7,7 +7,7 @@ function M.setup()
   -- ==================== Theme Settings ==================== --
 
   set.termguicolors = true
-  -- vim.cmd("colorscheme grucbox-material")
+  -- vim.cmd("colorscheme gruvbox-material")
   vim.cmd("colorscheme everforest")
 
   -- ================= Indentation Settings ================= --

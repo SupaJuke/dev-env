@@ -19,7 +19,7 @@ function M.setup()
         augroup END
 
         let g:gruvbox_material_background = 'hard'
-        " colorscheme gruvbox-material
+        let g:gruvbox_material_disable_italic_comment = 1
     ]]
   )
 end

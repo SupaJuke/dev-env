@@ -19,7 +19,7 @@ function M.setup()
         augroup END
 
         let g:everforest_background = 'hard'
-        " colorscheme everforest
+        let g:everforest_disable_italic_comment = 1
     ]]
   )
 end
