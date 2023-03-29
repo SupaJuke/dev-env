@@ -27,6 +27,7 @@ return {
 
   {
     "nvim-tree/nvim-tree.lua",
+    lazy = false,
     version = "*",
     dependencies = {
       'nvim-tree/nvim-web-devicons'
@@ -90,7 +91,7 @@ return {
 
   {
     'lewis6991/gitsigns.nvim',
-    lazy = true,
+    lazy = false,
     tag = 'release',
     config = function()
       require('gitsigns').setup()
@@ -99,6 +100,7 @@ return {
 
   {
     'goolord/alpha-nvim',
+    lazy = false,
     config = function()
       require('configs.plugins.alpha-nvim').setup()
     end

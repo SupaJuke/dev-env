@@ -9,7 +9,7 @@ fi
 
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/usr/local/go/bin"
-export ZSH="/home/$USER/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export MANPAGER='nvim +Man!'
 export BAT_THEME="base16"
 ZSH_THEME="powerlevel10k/powerlevel10k"
