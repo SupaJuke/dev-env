@@ -18,13 +18,17 @@ brew tap beeftornado/rmtree
 
 # Utilities
 brew install coreutils
-brew install nvim
-brew install wget
-brew install ripgrep
 brew install ffmpeg
+brew install wget
 brew install gnu-sed
-brew install fzf
 brew install make
+
+# Neovim
+brew install nvim
+brew install ripgrep
+brew install fzf
+brew install bat
+brew install fd
 
 # Containers
 brew install helm

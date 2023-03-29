@@ -7,7 +7,7 @@ fi
 
 # ------------------------------ Settings ------------------------------ #
 
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"  # For fdfind
 export PATH="$PATH:/usr/local/go/bin"
 export ZSH="$HOME/.oh-my-zsh"
 export MANPAGER='nvim +Man!'
@@ -65,7 +65,14 @@ nvim() {
 
 # ------------------------------ Aliasing ------------------------------ #
 
-if [[ $OSTYPE =~ 'linux' ]]
+# Bat
+if [[ ! -f "$HOME/.local/bin/bat" ]]
 then
-	alias bat="batcat"
+    ln -s /usr/bin/batcat ~/.local/bin/bat
+fi
+
+# Symlinking fdfind
+if [[ ! -f "$HOME/.local/bin/fd" ]]
+then
+    ln -s $(which fdfind) ~/.local/bin/fd
 fi

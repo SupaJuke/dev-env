@@ -14,16 +14,14 @@ echo $1 | sudo -Sk DEBIAN_FRONTEND=noninteractive apt-get install -y apt-fast  #
 # chown root:root /usr/share/zsh/functions/Completion/Debian/_apt-fast
 # source /usr/share/zsh/functions/Completion/Debian/_apt-fast
 
-# Installing Dependencies
-echo $1 | sudo -Sk apt-fast install -y bat
-echo $1 | sudo -Sk apt-fast install -y ca-certificates
-echo $1 | sudo -Sk apt-fast install -y fzf
+# Installing Dependencies (mainly for Neovim)
 echo $1 | sudo -Sk apt-fast install -y make
 echo $1 | sudo -Sk apt-fast install -y gcc
 echo $1 | sudo -Sk apt-fast install -y g++
-
-curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
-echo $1 | sudo -Sk apt install -y ./ripgrep_13.0.0_amd64.deb  # (for Telescope)
+echo $1 | sudo -Sk apt-fast install -y bat  # batcat -> bat
+echo $1 | sudo -Sk apt-fast install -y fd-find  # fdfind -> fd
+echo $1 | sudo -Sk apt-fast install -y fzf
+echo $1 | sudo -Sk apt-fast install -y ripgrep
 
 # Installing Latex
 # echo $1 | sudo -Sk apt-fast install -y texlive-latex-extra
