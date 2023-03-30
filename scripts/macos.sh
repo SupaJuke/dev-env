@@ -27,6 +27,7 @@ brew install make
 brew install nvim
 brew install ripgrep
 brew install fzf
+# Run this -> $(brew --prefix)/opt/fzf/install
 brew install bat
 brew install fd
 

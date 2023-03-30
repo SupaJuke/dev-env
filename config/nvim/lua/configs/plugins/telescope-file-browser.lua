@@ -12,7 +12,7 @@ function M.setup()
   vim.api.nvim_set_keymap(
     "n",
     "<space>fb",
-    ":Telescope file_browser path=%:p:h select_buffer=true",
+    ":Telescope file_browser path=%:p:h select_buffer=true <CR>",
     { noremap = true }
   )
 end

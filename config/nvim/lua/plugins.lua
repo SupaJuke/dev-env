@@ -75,18 +75,18 @@ return {
   },
 
   {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    lazy = true,
+    build = 'make'
+  },
+
+  {
     "nvim-telescope/telescope-file-browser.nvim",
     lazy = true,
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function()
       require('configs.plugins.telescope-file-browser').setup()
     end
-  },
-
-  {
-    'nvim-telescope/telescope-fzf-native.nvim',
-    lazy = true,
-    build = 'make'
   },
 
   {

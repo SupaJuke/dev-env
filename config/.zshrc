@@ -26,7 +26,7 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#NVM
+# nvm
 lazynvm() {
   	unset -f nvm node npm npx yarn nvim
   	export NVM_DIR=~/.nvm
@@ -63,9 +63,20 @@ nvim() {
     nvim $@
 }
 
+# fzf, fd, and rg
+if [[ $OSTYPE =~ "linux" ]]; then
+    source /usr/share/doc/fzf/examples/key-bindings.zsh
+    source /usr/share/doc/fzf/examples/completion.zsh
+elif [[ $OSTYPE =~ "darwin" ]]; then
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
+export FZF_DEFAULT_COMMAND="fd --type file --strip-cwd-prefix --follow --hidden --exclude .git --color=always"
+export FZF_DEFAULT_OPTS="--ansi"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # ------------------------------ Aliasing ------------------------------ #
 
-# Bat
+# bat
 if [[ ! -f "$HOME/.local/bin/bat" ]]
 then
     ln -s /usr/bin/batcat ~/.local/bin/bat
@@ -76,3 +87,4 @@ if [[ ! -f "$HOME/.local/bin/fd" ]]
 then
     ln -s $(which fdfind) ~/.local/bin/fd
 fi
+
