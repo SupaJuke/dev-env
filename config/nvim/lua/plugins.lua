@@ -58,6 +58,7 @@ return {
   {
     'neoclide/coc.nvim',
     lazy = true,
+    event = { "BufReadPre", "BufNewFile" },
     branch = 'release',
     config = function()
       require('configs.plugins.coc').setup()

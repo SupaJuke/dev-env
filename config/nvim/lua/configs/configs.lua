@@ -95,7 +95,7 @@ function M.setup()
   end
   autocmd({ "VimEnter" }, { callback = start_nvim })
 
-  -- Yanking
+  -- Yanking (Windows only)
   vim.g.clipboard = {
     name = 'WslClipboard',
     copy = {

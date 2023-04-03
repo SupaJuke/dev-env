@@ -5,6 +5,7 @@ function M.setup()
   local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }
   keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
+
   vim.g['coc_global_extensions'] = {
     -- "coc-tabnine",  -- cpu & ram usage too high
     "coc-sh",
@@ -21,6 +22,7 @@ function M.setup()
     "coc-vimlsp",
     "coc-vetur",
     "coc-yaml",
+    "coc-prettier",
   }
 end
 

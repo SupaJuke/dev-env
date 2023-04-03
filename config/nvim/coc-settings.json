@@ -1,0 +1,10 @@
+{
+  // "coc.preferences.useQuickfixForLocations": true,
+  // "coc.preferences.snippets.enable": true,
+
+  "coc.preferences.formatOnSave": true,
+
+  // Python Config
+  "python.formatting.provider": "black",
+  "pyright.inlayHints.variableTypes": false
+}
