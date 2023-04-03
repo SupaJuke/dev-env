@@ -1,6 +1,6 @@
 local M = {}
 
-function M.setup()
+function M.setup(configs)
   local set = vim.opt
   local autocmd = vim.api.nvim_create_autocmd
 
@@ -96,18 +96,20 @@ function M.setup()
   autocmd({ "VimEnter" }, { callback = start_nvim })
 
   -- Yanking (Windows only)
-  vim.g.clipboard = {
-    name = 'WslClipboard',
-    copy = {
-      ["+"] = 'clip.exe',
-      ["*"] = 'clip.exe',
-    },
-    paste = {
-      ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-      ["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-    },
-    cache_enabled = 0,
-  }
+  if configs.is_wsl then
+    vim.g.clipboard = {
+      name = 'WslClipboard',
+      copy = {
+        ["+"] = 'clip.exe',
+        ["*"] = 'clip.exe',
+      },
+      paste = {
+        ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+        ["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+      },
+      cache_enabled = 0,
+    }
+  end
 end
 
 return M
