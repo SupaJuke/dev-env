@@ -34,6 +34,7 @@ function M.setup()
       separator_style = "thick",
     },
   }
+  vim.keymap.set("n", "gb", ":BufferLinePick <CR>", { noremap = true, silent = true })
 end
 
 return M
