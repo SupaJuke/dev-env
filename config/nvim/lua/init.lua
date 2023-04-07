@@ -11,7 +11,6 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup("plugins")
 
 -- Configs
 local is_wsl = (function()
@@ -21,10 +20,15 @@ end)()
 
 local is_mac = vim.fn.has("macunix") == 1
 
-local is_linux = not is_wsl and not is_mac
+vim.g.os = (function()
+  if is_wsl then
+    return "wsl"
+  elseif is_mac then
+    return "macos"
+  else
+    return "linux"
+  end
+end)()
 
-require("configs.configs").setup({
-  is_wsl = is_wsl,
-  is_mac = is_mac,
-  is_linux = is_linux
-})
+require("lazy").setup("plugins")
+require("configs.configs").setup()

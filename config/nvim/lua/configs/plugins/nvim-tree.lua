@@ -12,7 +12,7 @@ function M.setup()
     },
   })
   set_keymaps()
-  vim.cmd([[highlight NvimTreeNormal guibg = none]])
+  -- vim.cmd([[highlight NvimTreeNormal guibg = none]])
 end
 
 return M

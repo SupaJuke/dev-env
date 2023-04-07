@@ -1,6 +1,6 @@
 local M = {}
 
-function M.setup(configs)
+function M.setup()
   local set = vim.opt
   local autocmd = vim.api.nvim_create_autocmd
 
@@ -29,6 +29,7 @@ function M.setup(configs)
       "o:hor50," ..
       "a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor," ..
       "sm:block-blinkwait175-blinkoff150-blinkon175"
+
   -- Return cursor once leave -> only for windows
   -- vim.cmd("au VimLeave * set guicursor=a:ver25-blinkon175")
 
@@ -96,7 +97,7 @@ function M.setup(configs)
   autocmd({ "VimEnter" }, { callback = start_nvim })
 
   -- Yanking (Windows only)
-  if configs.is_wsl then
+  if vim.g.os == "wsl" then
     vim.g.clipboard = {
       name = 'WslClipboard',
       copy = {
