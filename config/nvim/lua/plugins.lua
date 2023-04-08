@@ -1,21 +1,49 @@
 return {
+  -- ==================== Themes ==================== --
   {
     'sainnhe/gruvbox-material',
     lazy = true,
     priority = 1000,
     config = function()
       require('configs.plugins.gruvbox-material').setup()
-    end,
+    end
   },
 
   {
     'sainnhe/everforest',
-    lazy = false,
-    priority = 999,
+    lazy = true,
+    priority = 1001,
     config = function()
       require('configs.plugins.everforest').setup()
-    end,
+    end
   },
+
+  {
+    "shaunsingh/moonlight.nvim",
+    lazy = true,
+    config = function()
+      require('configs.plugins.moonlight').setup()
+    end
+  },
+
+  {
+    "marko-cerovac/material.nvim",
+    lazy = true,
+    config = function()
+      require('configs.plugins.material').setup()
+    end
+  },
+
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1002,
+    config = function()
+      require('configs.plugins.tokyonight').setup()
+    end
+  },
+
+  -- ================================================ --
 
   {
     'nvim-lualine/lualine.nvim',
@@ -34,7 +62,7 @@ return {
     },
     config = function()
       require("configs.plugins.nvim-tree").setup()
-    end,
+    end
   },
 
   {

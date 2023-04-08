@@ -11,6 +11,7 @@ local function diff_source()
     }
   end
 end
+
 function M.setup()
   lualine.setup({
     options = {
