@@ -8,6 +8,7 @@ function M.setup()
     plugins = {
       "dashboard",
       "gitsigns",
+      "nvim-tree",
       "nvim-web-devicons",
       "telescope",
     },

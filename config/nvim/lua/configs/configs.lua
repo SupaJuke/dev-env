@@ -8,10 +8,10 @@ function M.setup()
 
   set.termguicolors = true
   -- vim.cmd("colorscheme gruvbox-material")
-  -- vim.cmd("colorscheme everforest")
-  -- require('moonlight').set()
-  -- vim.cmd("colorscheme material")
-  vim.cmd("colorscheme tokyonight")
+  vim.cmd("colorscheme everforest")
+  -- vim.cmd("colorscheme moonlight") -- contrast too high
+  -- vim.cmd("colorscheme material") -- contrast too high
+  -- vim.cmd("colorscheme tokyonight")
 
   -- ================= Indentation Settings ================= --
 
@@ -99,7 +99,7 @@ function M.setup()
   end
   autocmd({ "VimEnter" }, { callback = start_nvim })
 
-  -- Yanking (Windows only)
+  -- Yanking (WSL only)
   if vim.g.os == "wsl" then
     vim.g.clipboard = {
       name = 'WslClipboard',
