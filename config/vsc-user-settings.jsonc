@@ -1,31 +1,49 @@
 {
   /* ===== Workbench Settings ===== */
-  // "workbench.colorTheme": "Gruvbox Material Dark",
+
+  // Current colorscheme
   "workbench.colorTheme": "Everforest Dark",
+
+  // Available color schemes:
+  // "workbench.colorTheme": "Gruvbox Material Dark",
+  // "workbench.colorTheme": "Everforest Dark",
+
+  "workbench.iconTheme": "Monokai Pro Icons",
   "workbench.tree.indent": 15,
   "workbench.colorCustomizations": {
+    // "editorWhitespace.foreground": "#7c6f64" // gruvbox
     "editorWhitespace.foreground": "#4F5B58" // everforest
   },
 
   /* ===== Editor Settings ===== */
-  "editor.fontFamily": "Cascadia Code, CaskaydiaCove NF",
+
+  // Font
+  "editor.fontFamily": "MonoLisa, CaskaydiaCove Nerd Font",
+  "editor.fontWeight": "500",
+  "editor.fontLigatures": true,
   "editor.fontSize": 12.5,
+  "editor.lineHeight": 0,
+
+  // Indentation
   "editor.detectIndentation": true,
   "editor.insertSpaces": false,
+
+  // Others
   "editor.minimap.renderCharacters": false,
   "editor.formatOnSave": true,
-  "editor.fontLigatures": true,
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": false,
   "explorer.confirmDragAndDrop": false,
 
   /* ===== Terminal Settings ===== */
-  "terminal.integrated.fontFamily": "Cascadia Code, CaskaydiaCove NF",
+  "terminal.integrated.fontFamily": "MonoLisa, CaskaydiaCove Nerd Font",
+  "terminal.integrated.fontWeight": "500",
   "terminal.integrated.fontSize": 12.5,
   "terminal.integrated.defaultProfile.linux": "zsh",
 
   /* ===== Plugin-specific settings ===== */
+
   // Git
   "git.confirmSync": false,
 
@@ -36,13 +54,14 @@
 
   // Everforest
   "everforest.darkContrast": "hard",
-  "everforest.darkSelection": "aqua",
+  "everforest.darkSelection": "red",
   "everforest.italicComments": false,
 
   // Latex Workshop
   "latex-workshop.view.pdf.viewer": "tab",
 
   /* ===== Language Specific Settings ===== */
+
   // C & CPP
   "C_Cpp.default.cStandard": "gnu99",
   "C_Cpp.autocompleteAddParentheses": true,
@@ -98,7 +117,9 @@
     // "editor.formatOnSave": false
   },
   "[python]": {
-    "editor.formatOnType": true
-    // "editor.formatOnSave": false
+    "editor.formatOnSave": true
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
   }
 }

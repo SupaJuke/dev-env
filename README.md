@@ -73,7 +73,9 @@ List of languages frequently used could be found in `lang-list.txt`.
 
 - Implemented `install.sh` as a one-stop service
 - Fully migrated to Lua and Lazy (instead of VimPlug)
+- Setup additional plugins and colorschemes for Nvim (e.g. Telescope, autoformat by Coc, Tokyonight Palemoon for Windows Terminal)
 - Tested the installation process on Ubuntu (22.04)
+- Included fonts (CaskaydiaCove & MonoLisa) to repo
 
 **Other features**
 
