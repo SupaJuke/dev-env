@@ -13,7 +13,6 @@ function M.setup()
   keyset("n", "gi", "<Plug>(coc-implementation)", { silent = true })
   keyset("n", "gr", "<Plug>(coc-references)", { silent = true })
 
-
   vim.g['coc_global_extensions'] = {
     -- "coc-tabnine",  -- cpu & ram usage too high
     "coc-sh",

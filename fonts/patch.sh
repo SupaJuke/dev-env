@@ -6,15 +6,17 @@ then
     exit
 fi
 
-FONT=$1
+FONT_DIR=$1
 FLAGS="--complete"
+echo $FONT
 if [[ $# -gt 1 ]]
 then
     FLAGS="$FLAGS ${@:2}"
 fi
 
-for FILE in "$FONT/*.*tf"
+for FILE in $FONT_DIR/*.*tf
 do
-    # echo "fontforge -script FontPatcher/font-patcher $FILE $FLAGS -out "$FONT/nerd_font/"" # For debug purposes
-    fontforge -script FontPatcher/font-patcher $FILE $FLAGS -out "${FONT}_patched/"
+    # echo "ran: fontforge -script FontPatcher/font-patcher $FLAGS -out "${FONT}_patched" $FILE" # For debug purposes
+    # echo $FILE
+    fontforge -script FontPatcher/font-patcher $FLAGS -out "$(echo $FONT_DIR | cut -d '/' -f 1)/patched/" $FILE
 done
