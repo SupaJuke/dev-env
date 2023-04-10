@@ -1,0 +1,43 @@
+[
+  {
+    "command": {
+      "action": "copy",
+      "singleLine": false
+    }
+  },
+  {
+    "command": "paste"
+  },
+  {
+    "command": "find",
+    "keys": "ctrl+shift+f"
+  },
+  {
+    "command": {
+      "action": "splitPane",
+      "split": "auto",
+      "splitMode": "duplicate"
+    },
+    "keys": "ctrl+shift+d"
+  },
+  {
+    "command": "unbound",
+    "keys": "alt+shift+d"
+  },
+  {
+    "command": "unbound",
+    "keys": "ctrl+c"
+  },
+  {
+    "command": "unbound",
+    "keys": "ctrl+insert"
+  },
+  {
+    "command": "unbound",
+    "keys": "ctrl+v"
+  },
+  {
+    "command": "unbound",
+    "keys": "shift+insert"
+  }
+]
