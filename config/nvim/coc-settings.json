@@ -9,5 +9,8 @@
 
   // Python Config
   "python.formatting.provider": "black",
-  "pyright.inlayHints.variableTypes": false
+  "pyright.inlayHints.variableTypes": false,
+
+  // Lua Config
+  "Lua.diagnostics.globals": ["vim"]
 }

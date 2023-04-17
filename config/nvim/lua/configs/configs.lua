@@ -25,9 +25,9 @@ function M.setup()
   set.preserveindent = true
 
   -- Displaying whitespace
-  set.list = true
-  set.listchars:append "lead:⋅"
-  set.listchars:append "trail:⋅"
+  -- set.list = true
+  -- set.listchars:append "lead:·"
+  -- set.listchars:append "trail:·"
 
   -- =================== Cursor Settings ==================== --
 

@@ -18,11 +18,26 @@
   /* ===== Editor Settings ===== */
 
   // Font
-  "editor.fontFamily": "MonoLisa, CaskaydiaCove Nerd Font",
-  "editor.fontWeight": "500",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 12.5,
+  "editor.fontFamily": "'Cascadia Code PL', CaskaydiaCove NF",
+  "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss20'",
+  // "editor.fontFamily": "'MonoLisa Nerd Font'",
+  // "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss20'",
+  "editor.fontSize": 14,
   "editor.lineHeight": 0,
+
+  // Theme
+  "editor.semanticTokenColorCustomizations": {
+    "[Everforest Dark]": {
+      "rules": {
+        "selfParameter": "#D699B6"
+      }
+    },
+    "[Gruvbox Material Dark]": {
+      "rules": {
+        "selfParameter": "#D3869B"
+      }
+    }
+  },
 
   // Indentation
   "editor.detectIndentation": true,
@@ -37,9 +52,10 @@
   "explorer.confirmDragAndDrop": false,
 
   /* ===== Terminal Settings ===== */
-  "terminal.integrated.fontFamily": "MonoLisa, CaskaydiaCove Nerd Font",
-  "terminal.integrated.fontWeight": "500",
-  "terminal.integrated.fontSize": 12.5,
+
+  // "terminal.integrated.fontFamily": "'Cascadia Code PL', 'CaskaydiaCove NF'",
+  "terminal.integrated.fontFamily": "'MonoLisa Nerd Font'",
+  "terminal.integrated.fontSize": 12,
   "terminal.integrated.defaultProfile.linux": "zsh",
 
   /* ===== Plugin-specific settings ===== */
@@ -55,10 +71,11 @@
   // Everforest
   "everforest.darkContrast": "hard",
   "everforest.darkSelection": "red",
-  "everforest.italicComments": false,
+  // "everforest.italicComments": false,
 
   // Latex Workshop
-  "latex-workshop.view.pdf.viewer": "tab",
+  // "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+  "latex-workshop.viewer.pdf.internal.port": 34744,
 
   /* ===== Language Specific Settings ===== */
 
