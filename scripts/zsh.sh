@@ -17,5 +17,8 @@ then
     rm "$HOME/.zshrc"
 fi
 
+# Creating zshenv file
+echo "ZDOTDIR=$1/config/zsh" > "$HOME/.zshenv"
+
 # Symlinking
-ln -s "$PWD/config/.zshrc" "$HOME/.zshrc"
+ln -s "$PWD/config/zsh/.zshrc" "$HOME/.zshrc"

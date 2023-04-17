@@ -23,50 +23,16 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Lazynvm
+source ${ZDOTDIR}/lazy_nvm.sh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# nvm
-lazynvm() {
-  	unset -f nvm node npm npx yarn nvim git
-  	export NVM_DIR=~/.nvm
-  	[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-}
-
-nvm() {
-    lazynvm 
-    nvm $@
-}
-
-node() {
-    lazynvm
-    node $@
-}
-
-npm() {
-    lazynvm
-    npm $@
-}
-
-npx() {
-    lazynvm
-    npx $@
-}
-
-yarn() {
-    lazynvm
-    yarn $@
-}
-
-nvim() {
-    lazynvm
-    nvim $@
-}
-
-git() {
-    lazynvm
-    git $@
-}
+# Browser for WSL
+if [[ $(uname -r) =~ 'WSL2' ]]; then
+    export BROWSER=wslview
+fi
 
 # fzf, fd, and rg
 if [[ $OSTYPE =~ "linux" ]]; then

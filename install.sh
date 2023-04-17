@@ -2,15 +2,17 @@
 
 ## ------------ Initializing variables ------------- ##
 
+ROOT_PATH=$(dirname $(readlink -f "$0"))
+
 if [[ $# -ne 1 ]]
 then
-	echo "./install.sh <sudo password>"
+	echo "./install.sh <root password>"
 	exit
 fi
 
 ## --------------- Setting up ZSH ------------------ ##
 
-./scripts/zsh.sh $1
+./scripts/zsh.sh $ROOT_PATH
 
 ## --------------- Setting up System --------------- ##
 
