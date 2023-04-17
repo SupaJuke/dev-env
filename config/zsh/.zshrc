@@ -29,9 +29,9 @@ source ${ZDOTDIR}/lazy_nvm.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Browser for WSL
+# Put WSL specific configs below:
 if [[ $(uname -r) =~ 'WSL2' ]]; then
-    export BROWSER=wslview
+    # export BROWSER=wslview
 fi
 
 # fzf, fd, and rg
