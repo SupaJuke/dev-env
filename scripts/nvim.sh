@@ -5,13 +5,12 @@
 	# https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Copying the file over
-if [[ -d "$HOME/.config/nvim" ]]
-then
+if [[ -d "$HOME/.config/nvim" ]]; then
 	rm -rf ~/.config/nvim
 fi
 
-if [[ ! -d "$HOME/.config" ]]
-then
+if [[ ! -d "$HOME/.config" ]]; then
     mkdir ~/.config
 fi
+
 ln -s "$PWD/config/nvim" "$HOME/.config/nvim"

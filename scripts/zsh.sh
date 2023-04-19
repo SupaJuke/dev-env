@@ -1,5 +1,17 @@
 #!/bin/zsh
 
+# Initialize Variable
+ROOT_PATH=$1
+if [[ $# -ne 1 ]]; then
+	echo "root path to repo not provided: ./$(basename $0) <root_path>"
+	exit
+fi
+
+if [[ ! -d "$ROOT_PATH/config/zsh" ]]; then
+    echo "zsh folder not contained in at $ROOT_PATH/config/zsh"
+    exit
+fi
+
 # Installing OMZ
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
@@ -12,13 +24,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
 # Removing old .zshrc
-if [[ -f "$HOME/.zshrc" ]]
-then
+if [[ -f "$HOME/.zshrc" ]]; then
     rm "$HOME/.zshrc"
 fi
 
 # Creating zshenv file
-echo "ZDOTDIR=$1/config/zsh" > "$HOME/.zshenv"
+echo "ZDOTDIR=$ROOT_PATH/config/zsh" > "$HOME/.zshenv"
 
 # Symlinking
 ln -s "$PWD/config/zsh/.zshrc" "$HOME/.zshrc"
