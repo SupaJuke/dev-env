@@ -18,7 +18,7 @@ function M.setup()
         case_mode = "smart_case",
       },
       file_browser = {
-        hijack_netrw = true,
+        hijack_netrw = false,
       }
     }
   }
