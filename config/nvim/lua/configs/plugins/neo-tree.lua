@@ -6,7 +6,7 @@ function M.setup()
   -- vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
   vim.g.neo_tree_remove_legacy_commands = 1
   keymap('n', '<F5>', "<Cmd>NeoTreeFocusToggle<CR>", { desc = 'Toggle NvimTree' })
-  keymap('n', '<F6>', "<Cmd>NeoTreeShow<CR>", { desc = 'Show Neo-tree (non-focused)' })
+  keymap('n', '<F6>', "<Cmd>Neotree show<CR>", { desc = 'Show Neo-tree (non-focused)' })
 
   require("neo-tree").setup({
     close_if_last_window = true,
