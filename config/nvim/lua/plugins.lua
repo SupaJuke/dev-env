@@ -19,14 +19,15 @@ return {
     end
   },
 
-  {
-    "folke/tokyonight.nvim",
-    lazy = true,
-    priority = 1002,
-    config = function()
-      require("configs.plugins.tokyonight").setup()
-    end
-  },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   disabled = true,
+  --   lazy = true,
+  --   priority = 1002,
+  --   config = function()
+  --     require("configs.plugins.tokyonight").setup()
+  --   end
+  -- },
 
   -- ======================== Editor ======================== --
 
@@ -87,6 +88,15 @@ return {
   -- ========================== UI ========================== --
 
   {
+    "folke/which-key.nvim",
+    config = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+      require("which-key").setup({})
+    end,
+  },
+
+  {
     "nvim-lualine/lualine.nvim",
     lazy = false,
     config = function()
@@ -94,18 +104,18 @@ return {
     end
   },
 
-  {
-    "nvim-tree/nvim-tree.lua",
-    enabled = false,
-    lazy = false,
-    version = "*",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons"
-    },
-    config = function()
-      require("configs.plugins.nvim-tree").setup()
-    end
-  },
+  -- {
+  --   "nvim-tree/nvim-tree.lua",
+  --   enabled = false,
+  --   lazy = false,
+  --   version = "*",
+  --   dependencies = {
+  --     "nvim-tree/nvim-web-devicons"
+  --   },
+  --   config = function()
+  --     require("configs.plugins.nvim-tree").setup()
+  --   end
+  -- },
 
   {
     "nvim-neo-tree/neo-tree.nvim",

@@ -2,11 +2,11 @@ local M = {}
 local telescope = require("telescope")
 function M.setup()
   local builtin = require('telescope.builtin')
-  vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-  vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-  vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-  vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
-  vim.keymap.set('n', '<leader>fr', builtin.oldfiles, {})
+  vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "Telescope find files" })
+  vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "Telescope live grep" })
+  vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = "Telescope find buffers" })
+  vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "Telescope help" })
+  vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = "Telescope find recent" })
 
   -- Setup
   telescope.setup {
