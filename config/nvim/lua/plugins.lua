@@ -64,6 +64,14 @@ return {
       require("gitsigns").setup()
     end
   },
+
+  {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup()
+    end
+  },
+
   -- ======================= LSP & TS ======================= --
 
   {
@@ -90,9 +98,7 @@ return {
   {
     "folke/which-key.nvim",
     config = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-      require("which-key").setup({})
+      require("configs.plugins.which-key").setup()
     end,
   },
 
