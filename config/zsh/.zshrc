@@ -36,11 +36,11 @@ if [[ $(uname -r) =~ 'WSL2' ]]; then
 fi
 
 # fzf, fd, and rg
-if [[ $OSTYPE =~ "linux" ]]; then
-    source /usr/share/doc/fzf/examples/key-bindings.zsh
-    source /usr/share/doc/fzf/examples/completion.zsh
-elif [[ $OSTYPE =~ "darwin" ]]; then
+if [[ $OSTYPE =~ "darwin" ]] || [[ $(uname -a) =~ "wolf" ]]; then
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+elif [[ $OSTYPE =~ "linux" ]]; then
+    [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
+    [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
 fi
 export FZF_DEFAULT_COMMAND="fd --type file --strip-cwd-prefix --follow --hidden --exclude .git --color=always"
 export FZF_DEFAULT_OPTS="--ansi"
@@ -51,12 +51,12 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # bat
 if [[ $OSTYPE =~ "linux" ]] && [[ ! -f "$HOME/.local/bin/bat" ]]
 then
-    ln -s /usr/bin/batcat ~/.local/bin/bat
+    [[ -f "/usr/bin/batcat" ]] && ln -s /usr/bin/batcat ~/.local/bin/bat
 fi
 
 # Symlinking fdfind
 if [[ $OSTYPE =~ "linux" ]] && [[ ! -f "$HOME/.local/bin/fd" ]]
 then
-    ln -s $(which fdfind) ~/.local/bin/fd
+    [[ -f "/usr/bin/fdfind" ]] && ln -s $(which fdfind) ~/.local/bin/fd
 fi
 

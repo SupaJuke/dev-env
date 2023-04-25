@@ -32,4 +32,4 @@ fi
 echo "ZDOTDIR=$ROOT_PATH/config/zsh" > "$HOME/.zshenv"
 
 # Symlinking
-ln -s "$PWD/config/zsh/.zshrc" "$HOME/.zshrc"
+ln -s "$ROOT_PATH/config/zsh/.zshrc" "$HOME/.zshrc"
