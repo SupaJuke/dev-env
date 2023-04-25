@@ -27,7 +27,8 @@ source $ZSH/oh-my-zsh.sh
 source ${ZDOTDIR}/lazy_nvm.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+P10K_PATH="$ZDOTDIR/.p10k.zsh"
+[[ ! -f $P10K_PATH ]] || source $P10K_PATH
 
 # Put WSL specific configs below:
 if [[ $(uname -r) =~ 'WSL2' ]]; then
@@ -48,13 +49,13 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # ------------------------------ Aliasing ------------------------------ #
 
 # bat
-if [[ ! -f "$HOME/.local/bin/bat" ]]
+if [[ $OSTYPE =~ "linux" ]] && [[ ! -f "$HOME/.local/bin/bat" ]]
 then
     ln -s /usr/bin/batcat ~/.local/bin/bat
 fi
 
 # Symlinking fdfind
-if [[ ! -f "$HOME/.local/bin/fd" ]]
+if [[ $OSTYPE =~ "linux" ]] && [[ ! -f "$HOME/.local/bin/fd" ]]
 then
     ln -s $(which fdfind) ~/.local/bin/fd
 fi

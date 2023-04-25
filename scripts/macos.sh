@@ -32,9 +32,9 @@ brew install bat
 brew install fd
 
 # Containers
-brew install helm
-brew install docker
-brew install kubectl
+# brew install helm
+# brew install docker
+# brew install kubectl
 
 # Development
 brew install go
