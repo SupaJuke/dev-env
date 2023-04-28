@@ -7,7 +7,7 @@ fi
 
 # ------------------------------ Settings ------------------------------ #
 
-export PATH="$PATH:$HOME/.local/bin"  # For fdfind
+export PATH="$PATH:$HOME/.local/bin"  # For fdfind & bat
 export PATH="$PATH:/usr/local/go/bin"
 export ZSH="$HOME/.oh-my-zsh"
 export MANPAGER='nvim +Man!'
