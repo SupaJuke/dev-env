@@ -52,7 +52,7 @@ List of languages frequently used could be found in `lang-list.txt`.
 
 - ~~copy p10k configuration (and maybe for each OS -- linux/mac)~~ -> too trivial, better to just do it on the fly
 - ~~clean install vs existing install? (for example vimplug should only be installed when clean install)~~
-- ~~file line for NERDTree -> might not happen as we might~~ moved to [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- ~~file line for NERDTree -> might not happen as we might~~ moved to ~~[nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)~~ [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 
 ---
 
@@ -72,10 +72,11 @@ List of languages frequently used could be found in `lang-list.txt`.
 **Main features**
 
 - Implemented `install.sh` as a one-stop service
-- Fully migrated to Lua and Lazy (instead of VimPlug)
-- Setup additional plugins and colorschemes for Nvim (e.g. Telescope, autoformat by Coc, Tokyonight Palemoon for Windows Terminal)
-- Tested the installation process on Ubuntu (22.04)
+- Fully migrated to Vimscript to Lua and VimPlug to Lazy
+- Setup additional plugins and colorschemes for Nvim (e.g. Telescope, autoformat by CoC, Tokyonight Palemoon for Windows Terminal)
+- Tested the installation process on Ubuntu (22.04) & MacOS (Monterey Intel)
 - Included fonts (CaskaydiaCove & MonoLisa) to repo
+- Include both .zshrc and .p10k.zsh in the repo and use it from there
 
 **Other features**
 
