@@ -2,8 +2,8 @@
 
 # Checking provided password
 PASSWORD=$1
-if [[ $# -ne 1 ]]; then
-	echo "super user password not provided: ./$(basename $0) <sudo password>"
+if [[ $# -ne 2 ]]; then
+	echo "super user password not provided: ./$(basename $0) <sudo password> <ROOT_PATH>"
 	exit
 fi
 
@@ -28,6 +28,7 @@ echo $PASSWORD | sudo -Sk DEBIAN_FRONTEND=noninteractive apt-get install -y apt-
 
 # Installing Dependencies (mainly for Neovim)
 echo $PASSWORD | sudo -Sk apt-fast install -y make
+# echo $PASSWORD | sudo -Sk apt-fast install -y make -> TODO: add multiple packages in one call
 echo $PASSWORD | sudo -Sk apt-fast install -y gcc
 echo $PASSWORD | sudo -Sk apt-fast install -y g++
 echo $PASSWORD | sudo -Sk apt-fast install -y bat  # batcat -> bat
@@ -35,11 +36,15 @@ echo $PASSWORD | sudo -Sk apt-fast install -y fd-find  # fdfind -> fd
 echo $PASSWORD | sudo -Sk apt-fast install -y fzf
 echo $PASSWORD | sudo -Sk apt-fast install -y ripgrep
 
-# Installing Latex
+# Install Latex
 # echo $PASSWORD | sudo -Sk apt-fast install -y texlive-latex-extra
 
 # Install Neovim
 wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
-echo $PASSWORD | ln -s $2/squashfs-root/usr/bin/nvim /usr/local/bin/nvim
+if [[ ! -d "$HOME/.local/bin" ]]; then
+    mkdir $HOME/.local/bin
+fi
+ln -s "$2/squashfs-root/usr/bin/nvim" "$HOME/.local/bin/nvim"
+rm nvim.appimage

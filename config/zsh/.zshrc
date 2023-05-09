@@ -51,7 +51,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # bat
 if [[ $OSTYPE =~ "linux" ]] && [[ ! -f "$HOME/.local/bin/bat" ]]
 then
-    [[ -f "/usr/bin/batcat" ]] && ln -s /usr/bin/batcat ~/.local/bin/bat
+    [[ -f "/usr/bin/batcat" ]] && ln -s $(which batcat) ~/.local/bin/bat
 fi
 
 # Symlinking fdfind
@@ -59,4 +59,3 @@ if [[ $OSTYPE =~ "linux" ]] && [[ ! -f "$HOME/.local/bin/fd" ]]
 then
     [[ -f "/usr/bin/fdfind" ]] && ln -s $(which fdfind) ~/.local/bin/fd
 fi
-
