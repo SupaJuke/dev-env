@@ -13,7 +13,7 @@ ROOT_PATH=$(dirname $(readlink -f "$0"))
 if [[ $OSTYPE =~ 'darwin' ]]; then
 	./scripts/macos.sh
 elif [[ $OSTYPE =~ 'linux' ]]; then
-	./scripts/ubuntu.sh $1
+	./scripts/ubuntu.sh $1 $ROOT_PATH
 fi
 
 ## --------------- Setting up Neovim --------------- ##

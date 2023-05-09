@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Checking provided password
-$PASSWORD=$1
+PASSWORD=$1
 if [[ $# -ne 1 ]]; then
 	echo "super user password not provided: ./$(basename $0) <sudo password>"
 	exit
@@ -39,8 +39,11 @@ echo $PASSWORD | sudo -Sk apt-fast install -y ripgrep
 # echo $PASSWORD | sudo -Sk apt-fast install -y texlive-latex-extra
 
 # Install Neovim
-wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
-echo $PASSWORD | sudo -Sk apt install -y ./nvim-linux64.deb
+wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage --appimage-extract
+ln -s $2/squashfs-root/usr/bin/nvim /usr/local/bin/nvim
+# echo $PASSWORD | sudo -Sk apt install -y ./nvim-linux64.deb
 
 # Clean Up Artifacts
-rm ripgrep*.deb nvim*.deb
+rm ripgrep*.deb
