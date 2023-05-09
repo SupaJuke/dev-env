@@ -42,8 +42,4 @@ echo $PASSWORD | sudo -Sk apt-fast install -y ripgrep
 wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
-ln -s $2/squashfs-root/usr/bin/nvim /usr/local/bin/nvim
-# echo $PASSWORD | sudo -Sk apt install -y ./nvim-linux64.deb
-
-# Clean Up Artifacts
-rm ripgrep*.deb
+echo $PASSWORD | ln -s $2/squashfs-root/usr/bin/nvim /usr/local/bin/nvim
