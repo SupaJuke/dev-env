@@ -44,7 +44,7 @@ wget https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage --appimage-extract
 if [[ ! -d "$HOME/.local/bin" ]]; then
-    mkdir $HOME/.local/bin
+    mkdir -p $HOME/.local/bin
 fi
 ln -s "$2/squashfs-root/usr/bin/nvim" "$HOME/.local/bin/nvim"
 rm nvim.appimage
