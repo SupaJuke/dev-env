@@ -1,5 +1,6 @@
 .DS_Store
 config/zsh/.zcompdump*
+config/zsh/.zsh_sessions
 config/zsh/.zsh_history
 .vscode
 squashfs-root
