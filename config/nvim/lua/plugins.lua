@@ -34,7 +34,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     lazy = false,
-    tag = "0.1.1",
+    tag = "0.1.4",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("configs.plugins.telescope").setup()
@@ -125,7 +125,7 @@ return {
 
   {
     "nvim-neo-tree/neo-tree.nvim",
-    branch = "v2.x",
+    branch = "v3.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-tree/nvim-web-devicons",
@@ -147,6 +147,7 @@ return {
 
   {
     "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
     config = function()
       require("configs.plugins.indent-blankline").setup()
     end

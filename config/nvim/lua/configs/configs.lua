@@ -100,7 +100,7 @@ function M.setup()
 
     -- Open the tree
     vim.cmd("Alpha")
-    vim.cmd("NeoTreeShow")
+    vim.cmd("Neotree show")
   end
   autocmd({ "VimEnter" }, { callback = start_nvim })
 
