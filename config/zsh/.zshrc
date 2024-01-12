@@ -59,3 +59,9 @@ if [[ $OSTYPE =~ "linux" ]] && [[ ! -f "$HOME/.local/bin/fd" ]]
 then
     [[ -f "/usr/bin/fdfind" ]] && ln -s $(which fdfind) ~/.local/bin/fd
 fi
+
+# ------------------------------ Local Settings ------------------------ #
+
+# Sourcing local .zshrc
+source ${ZDOTDIR}/.zshrc_local
+
