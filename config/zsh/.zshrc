@@ -64,4 +64,3 @@ fi
 
 # Sourcing local .zshrc
 source ${ZDOTDIR}/.zshrc_local
-
