@@ -3,18 +3,13 @@ local ibl = require("ibl")
 
 function M.setup()
   ibl.setup({
-    -- (v3) Listing available fields to be configured
     enabled = true,
     indent = {
-      -- char = "|",
       char = "│",
-      -- tab_char = { "a", "b", "c" },
-      -- highlight = { "Function", "Label" },
-      -- smart_indent_cap = true,
-      -- priority = 2,
+      -- tab_char = "│",
     },
     whitespace = { remove_blankline_trail = false },
-    scope = {},
+    scope = { enabled = false },
   })
 end
 
