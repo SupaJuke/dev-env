@@ -4,9 +4,9 @@ local tn = require("tokyonight")
 function M.setup()
   tn.setup({
     style = "moon",
-    transparent = true,
+    transparent = false,
     styles = {
-      sidebars = "transparent",
+      -- sidebars = "transparent",
     }
   })
 end

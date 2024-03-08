@@ -19,15 +19,15 @@ return {
     end
   },
 
-  -- {
-  --   "folke/tokyonight.nvim",
-  --   disabled = true,
-  --   lazy = true,
-  --   priority = 1002,
-  --   config = function()
-  --     require("configs.plugins.tokyonight").setup()
-  --   end
-  -- },
+  {
+    "folke/tokyonight.nvim",
+    -- disabled = true,
+    lazy = false,
+    priority = 1002,
+    config = function()
+      require("configs.plugins.tokyonight").setup()
+    end
+  },
 
   -- ======================== Editor ======================== --
 

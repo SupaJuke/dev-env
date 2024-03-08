@@ -8,10 +8,10 @@ function M.setup()
 
   set.termguicolors = true
   -- vim.cmd("colorscheme gruvbox-material")
-  vim.cmd("colorscheme everforest")
+  -- vim.cmd("colorscheme everforest")
   -- vim.cmd("colorscheme moonlight") -- contrast too high
   -- vim.cmd("colorscheme material") -- contrast too high
-  -- vim.cmd("colorscheme tokyonight")
+  vim.cmd("colorscheme tokyonight")
 
   -- ================= Indentation Settings ================= --
 

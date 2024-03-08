@@ -46,7 +46,7 @@ function M.setup()
       lualine_z = {}
     },
     tabline = {},
-    extensions = { 'nvim-tree' }
+    extensions = { 'neo-tree', 'lazy' }
   })
 end
 
