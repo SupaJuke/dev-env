@@ -7,7 +7,8 @@ function M.setup()
     transparent = false,
     styles = {
       -- sidebars = "transparent",
-    }
+    },
+    lualine_bold = false,
   })
 end
 

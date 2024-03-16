@@ -32,3 +32,4 @@ end)()
 
 require("lazy").setup("plugins")
 require("configs.configs").setup()
+require("configs.keymaps").setup()

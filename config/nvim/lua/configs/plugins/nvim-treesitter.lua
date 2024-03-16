@@ -12,6 +12,7 @@ function M.setup()
       "go",
       "gomod",
       "gosum",
+      "haskell",
       "html",
       "javascript",
       "json",
