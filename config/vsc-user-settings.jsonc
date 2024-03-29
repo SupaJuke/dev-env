@@ -2,7 +2,7 @@
   /* ===== Workbench Settings ===== */
 
   // Current colorscheme
-  "workbench.colorTheme": "Everforest Dark",
+  "workbench.colorTheme": "Tokyo Night Storm",
 
   // Available color schemes:
   // "workbench.colorTheme": "Gruvbox Material Dark",
@@ -23,6 +23,7 @@
   // "editor.fontFamily": "'MonoLisa Nerd Font'",
   // "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss20'",
   "editor.fontSize": 14,
+  // "editor.fontSize": 14, -- original size
   "editor.lineHeight": 0,
 
   // Theme
@@ -51,12 +52,31 @@
   "editor.bracketPairColorization.enabled": false,
   "explorer.confirmDragAndDrop": false,
 
+  "todohighlight.keywords": [
+    {
+      "text": "TODO:",
+      "backgroundColor": "rgba(230, 126, 128, 0.8)",
+      "isWholeLine": false,
+      "border": "1px solid transparent",
+      "borderRadius": "3px"
+    },
+    {
+      "text": "NOTE:",
+      "backgroundColor": "rgba(250, 220, 50, 0.6)",
+      "color": "white",
+      "isWholeLine": false,
+      "border": "1px solid transparent",
+      "borderRadius": "3px"
+    }
+  ],
+
   /* ===== Terminal Settings ===== */
 
-  // "terminal.integrated.fontFamily": "'Cascadia Code PL', 'CaskaydiaCove NF'",
-  "terminal.integrated.fontFamily": "'MonoLisa Nerd Font'",
-  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontFamily": "'Cascadia Code PL', 'CaskaydiaCove NF'",
+  // "terminal.integrated.fontFamily": "'MonoLisa Nerd Font'",
+  "terminal.integrated.fontSize": 15,
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
 
   /* ===== Plugin-specific settings ===== */
 
@@ -81,13 +101,14 @@
 
   // C & CPP
   "C_Cpp.default.cStandard": "gnu99",
+  "C_Cpp.default.cppStandard": "c++20",
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
-  "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, UseTab: Always, IndentWidth: 4, TabWidth: 4, ColumnLimit: 90}",
+  "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, UseTab: Always, IndentWidth: 4, TabWidth: 4, ColumnLimit: 90 }",
 
   // Golang
   "go.lintTool": "golangci-lint",
@@ -125,18 +146,16 @@
     "editor.tabSize": 2
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[go]": {
-    // "editor.formatOnSave": false
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[python]": {
-    "editor.formatOnSave": true
-  },
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
