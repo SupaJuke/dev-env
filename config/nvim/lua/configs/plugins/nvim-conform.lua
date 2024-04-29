@@ -15,10 +15,8 @@ function M.setup()
     formatters_by_ft = {
       lua = { "stylua" },
       python = { "black" },
-      javascript = { { "prettier" } },
-      typescript = { { "prettier" } },
-      -- javascript = { { "prettierd", "prettier" } },
-      -- typescript = { { "prettierd", "prettier" } },
+      javascript = { { "prettierd", "prettier" } },
+      typescript = { { "prettierd", "prettier" } },
     },
   })
 end
