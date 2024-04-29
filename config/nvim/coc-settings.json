@@ -15,5 +15,5 @@
   "Lua.diagnostics.globals": ["vim"],
 
   // Clangd
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/17.0.3/clangd_17.0.3/bin/clangd"
+  "clangd.path": "/usr/local/opt/llvm/bin/clangd"
 }

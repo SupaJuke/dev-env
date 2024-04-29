@@ -74,14 +74,41 @@ return {
 
   -- ======================= LSP & TS ======================= --
 
+  -- === Deprecated ===
+  -- {
+  --   "neoclide/coc.nvim",
+  --   lazy = true,
+  --   event = { "BufReadPre", "BufNewFile" },
+  --   branch = "release",
+  --   config = function()
+  --     require("configs.plugins.coc").setup()
+  --   end
+  -- },
+
+  -- lspconfig + mason --
   {
-    "neoclide/coc.nvim",
-    lazy = true,
-    event = { "BufReadPre", "BufNewFile" },
-    branch = "release",
+    "neovim/nvim-lspconfig",
+    lazy = false,
+    dependencies = {
+      "mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+    }
+  },
+  {
+    "williamboman/mason.nvim",
+    lazy = false,
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    lazy = false,
+    -- event = { "BufReadPre", "BufNewFile" },
     config = function()
-      require("configs.plugins.coc").setup()
+      require("configs.plugins.nvim-lsp-mason").setup()
     end
+  },
+  {
+    "lukas-reineke/lsp-format.nvim",
+    lazy = false,
   },
 
   {
