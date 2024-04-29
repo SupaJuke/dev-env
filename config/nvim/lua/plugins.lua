@@ -110,6 +110,20 @@ return {
     "lukas-reineke/lsp-format.nvim",
     lazy = false,
   },
+  {
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
+    keys = { {
+      "<leader>cf",
+      function()
+        require("conform").format({ async = false, lsp_fallback = true })
+      end,
+    } },
+    config = function()
+      require("configs.plugins.nvim-conform").setup()
+    end
+  },
 
   {
     "nvim-treesitter/nvim-treesitter",
