@@ -1,5 +1,5 @@
 local M = {}
-local lualine = require('lualine')
+local lualine = require("lualine")
 
 local function diff_source()
   local gitsigns = vim.b.gitsigns_status_dict
