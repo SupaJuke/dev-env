@@ -13,7 +13,7 @@ function M.setup()
       lsp_fallback = true
     },
     formatters_by_ft = {
-      lua = { "stylua" },
+      -- lua = { "stylua" }, fuck this formatter for using tab
       python = { "black" },
       javascript = { { "prettierd", "prettier" } },
       typescript = { { "prettierd", "prettier" } },

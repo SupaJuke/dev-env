@@ -7,7 +7,7 @@ return {
     priority = 1000,
     config = function()
       require("configs.plugins.gruvbox-material").setup()
-    end
+    end,
   },
 
   {
@@ -16,7 +16,7 @@ return {
     priority = 1001,
     config = function()
       require("configs.plugins.everforest").setup()
-    end
+    end,
   },
 
   {
@@ -26,7 +26,7 @@ return {
     priority = 1002,
     config = function()
       require("configs.plugins.tokyonight").setup()
-    end
+    end,
   },
 
   -- ======================== Editor ======================== --
@@ -38,13 +38,13 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("configs.plugins.telescope").setup()
-    end
+    end,
   },
 
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     lazy = true,
-    build = "make"
+    build = "make",
   },
 
   {
@@ -53,7 +53,7 @@ return {
     dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
     config = function()
       require("configs.plugins.telescope-file-browser").setup()
-    end
+    end,
   },
 
   {
@@ -62,14 +62,14 @@ return {
     tag = "release",
     config = function()
       require("gitsigns").setup()
-    end
+    end,
   },
 
   {
     "windwp/nvim-autopairs",
     config = function()
       require("nvim-autopairs").setup()
-    end
+    end,
   },
 
   -- ======================= LSP & TS ======================= --
@@ -92,7 +92,7 @@ return {
     dependencies = {
       "mason.nvim",
       "williamboman/mason-lspconfig.nvim",
-    }
+    },
   },
   {
     "williamboman/mason.nvim",
@@ -104,7 +104,7 @@ return {
     -- event = { "BufReadPre", "BufNewFile" },
     config = function()
       require("configs.plugins.nvim-lsp-mason").setup()
-    end
+    end,
   },
   {
     "lukas-reineke/lsp-format.nvim",
@@ -114,15 +114,17 @@ return {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
     cmd = { "ConformInfo" },
-    keys = { {
-      "<leader>cf",
-      function()
-        require("conform").format({ async = false, lsp_fallback = true })
-      end,
-    } },
+    keys = {
+      {
+        "<leader>cf",
+        function()
+          require("conform").format({ async = false, lsp_fallback = true })
+        end,
+      },
+    },
     config = function()
       require("configs.plugins.nvim-conform").setup()
-    end
+    end,
   },
 
   {
@@ -131,13 +133,19 @@ return {
     build = ":TSUpdate",
     config = function()
       require("configs.plugins.nvim-treesitter").setup()
-    end
+    end,
   },
 
   -- ========================== UI ========================== --
 
   {
+    "echasnovski/mini.nvim",
+    version = false,
+  },
+
+  {
     "folke/which-key.nvim",
+
     config = function()
       require("configs.plugins.which-key").setup()
     end,
@@ -148,7 +156,7 @@ return {
     lazy = false,
     config = function()
       require("configs.plugins.lualine").setup()
-    end
+    end,
   },
 
   -- {
@@ -174,16 +182,16 @@ return {
     },
     config = function()
       require("configs.plugins.neo-tree").setup()
-    end
+    end,
   },
 
   {
     "akinsho/bufferline.nvim",
     lazy = false,
-    version = "v3.*",
+    version = "*",
     config = function()
       require("configs.plugins.bufferline").setup()
-    end
+    end,
   },
 
   {
@@ -191,7 +199,7 @@ return {
     main = "ibl",
     config = function()
       require("configs.plugins.indent-blankline").setup()
-    end
+    end,
   },
 
   {
@@ -199,14 +207,14 @@ return {
     lazy = false,
     config = function()
       require("configs.plugins.alpha-nvim").setup()
-    end
+    end,
   },
 
   {
     "nvim-tree/nvim-web-devicons",
     lazy = true,
     config = function()
-      require "nvim-web-devicons".get_icons()
-    end
+      require("nvim-web-devicons").get_icons()
+    end,
   },
 }
