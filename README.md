@@ -22,7 +22,7 @@ Run `install.sh`. That should handle most stuffs. This will also trigger `p10k` 
 
 ~~For Neovim plugins, run `nvim`. Once inside, run `:PlugInstall` to install all plugins. For specific plugin configs (Treesitter & Coc), do `TSInstall <language>` and `CocInstall <language>`.~~
 
-Before running `nvim`, make sure to install `node` (e.g. `nvm install --lts`). Then, you could run `nvim`, which will automatically install the plugins, including extensions for `treesitter` and `coc`.
+Before running `nvim`, make sure to install `node` (e.g. `nvm install --lts`). Then, you could run `nvim`, which will automatically install the plugins, including extensions for `treesitter`.
 
 List of languages frequently used could be found in `lang-list.txt`.
 
@@ -58,6 +58,27 @@ List of languages frequently used could be found in `lang-list.txt`.
 
 ## Change Logs
 
+### V3 (May 2024)
+
+- Migrated from **coc** **nvim.lspconfig** and **mason**
+
+### V2 (March 2023)
+
+**Main features**
+
+- Implemented `install.sh` as a one-stop service
+- Fully migrated to **Vimscript** to **Lua** and **VimPlug** to **Lazy**
+- Setup additional plugins and colorschemes for Nvim (e.g. Telescope, autoformat by CoC, Tokyonight Palemoon for Windows Terminal)
+- Tested the installation process on Ubuntu (22.04) & MacOS (Monterey Intel)
+- ~~Included fonts (CaskaydiaCove & MonoLisa) to repo~~
+- Include both .zshrc and .p10k.zsh in the repo and use it from there
+
+**Other features**
+
+- Updated `README.md`
+- Now using symlink with configs (`.config/nvim` and `.zshrc`)
+- Restructured folders
+
 ### V1 (May 2022)
 
 - Installed the following plugins:
@@ -66,20 +87,3 @@ List of languages frequently used could be found in `lang-list.txt`.
   - fzf (on nvim)
   - fzf-preview -> ignore?
   - bat (better cat)
-
-### V2 (March 2023)
-
-**Main features**
-
-- Implemented `install.sh` as a one-stop service
-- Fully migrated to Vimscript to Lua and VimPlug to Lazy
-- Setup additional plugins and colorschemes for Nvim (e.g. Telescope, autoformat by CoC, Tokyonight Palemoon for Windows Terminal)
-- Tested the installation process on Ubuntu (22.04) & MacOS (Monterey Intel)
-- Included fonts (CaskaydiaCove & MonoLisa) to repo
-- Include both .zshrc and .p10k.zsh in the repo and use it from there
-
-**Other features**
-
-- Updated `README.md`
-- Now using symlink with configs (`.config/nvim` and `.zshrc`)
-- Restructured folders
