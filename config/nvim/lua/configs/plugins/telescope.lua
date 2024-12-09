@@ -8,6 +8,9 @@ function M.setup()
   vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "Telescope help" })
   vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = "Telescope find recent" })
 
+  vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = "Go to Definition" })
+  vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = "Go to References" })
+
   -- Setup
   telescope.setup {
     extensions = {

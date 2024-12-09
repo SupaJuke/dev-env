@@ -151,9 +151,18 @@ return {
 
   {
     "folke/which-key.nvim",
-
+    lazy = false,
+    keys = {
+      {
+        "<leader>?",
+        function()
+          require("which-key").show({ global = false })
+        end,
+        desc = "Buffer Keymaps",
+      },
+    },
     config = function()
-      require("configs.plugins.which-key").setup()
+      require("configs.plugins.whichkey").setup()
     end,
   },
 
