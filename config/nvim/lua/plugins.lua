@@ -126,6 +126,7 @@ return {
         function()
           require("conform").format({ async = false, lsp_fallback = true })
         end,
+        desc = "format file"
       },
     },
     config = function()
