@@ -36,23 +36,22 @@ function M.setup()
     keymap = {
       ["<D-c>"] = { "show" },
       ["<S-CR>"] = { "hide" },
-      ["<CR>"] = { "select_and_accept", "fallback" },
-      ["<Tab>"] = { "select_next", "fallback" },
-      ["<S-Tab>"] = { "select_prev", "fallback" },
+      ["<Tab>"] = { "select_and_accept", "fallback" },
+      -- ["<Tab>"] = { "select_next", "fallback" },
+      -- ["<S-Tab>"] = { "select_prev", "fallback" },
       ["<Down>"] = { "select_next", "fallback" },
       ["<Up>"] = { "select_prev", "fallback" },
       ["<PageDown>"] = { "scroll_documentation_down" },
       ["<PageUp>"] = { "scroll_documentation_up" },
     },
 
-    -- TODO: make sure documentation shows up
-    windows = {
+    completion = {
       documentation = {
+        auto_show = true,
         border = vim.g.borderStyle,
         min_width = 15,
         max_width = 45, -- smaller, due to https://github.com/Saghen/blink.cmp/issues/194
         max_height = 10,
-        auto_show = true,
         auto_show_delay_ms = 250,
       },
       autocomplete = {
@@ -85,7 +84,7 @@ function M.setup()
           }
         end,
       },
-    },
+    }
   }
 end
 
