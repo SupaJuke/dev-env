@@ -32,6 +32,14 @@ return {
   -- ======================== Editor ======================== --
 
   {
+    "nvim-treesitter/nvim-treesitter",
+    lazy = false,
+    build = ":TSUpdate",
+    config = function()
+      require("configs.plugins.nvim-treesitter").setup()
+    end,
+  },
+  {
     "nvim-telescope/telescope.nvim",
     lazy = false,
     tag = "0.1.4",
@@ -91,14 +99,11 @@ return {
   --   end
   -- },
 
-  -- lspconfig + mason --
+  -- lspconfig + mason
   {
     "neovim/nvim-lspconfig",
     lazy = false,
-    dependencies = {
-      "mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
-    },
+    dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" }
   },
   {
     "williamboman/mason.nvim",
@@ -112,6 +117,8 @@ return {
       require("configs.plugins.nvim-lsp-mason").setup()
     end,
   },
+
+  -- Formatters
   {
     "lukas-reineke/lsp-format.nvim",
     lazy = false,
@@ -134,14 +141,7 @@ return {
     end,
   },
 
-  {
-    "nvim-treesitter/nvim-treesitter",
-    lazy = false,
-    build = ":TSUpdate",
-    config = function()
-      require("configs.plugins.nvim-treesitter").setup()
-    end,
-  },
+  -- Autocompletion
   {
     -- TODO: move this into its own file
     'saghen/blink.cmp',
@@ -156,8 +156,6 @@ return {
     -- If you use nix, you can build from source using latest nightly rust with:
     -- build = 'nix run .#build-plugin',
 
-    ---@module 'blink.cmp'
-    ---@type blink.cmp.Config
     config = function()
       require("configs.plugins.blink").setup()
     end,
