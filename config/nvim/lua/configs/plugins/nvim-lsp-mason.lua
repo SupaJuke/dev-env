@@ -45,6 +45,7 @@ function M.setup()
 		["clangd"] = function()
 			lsp_config.clangd.setup({
 				on_attach = lsp_format.on_attach,
+                mason = false,
 			})
 		end,
 
