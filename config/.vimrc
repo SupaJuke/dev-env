@@ -9,6 +9,8 @@ set shiftwidth=2
 "  set smarttab
 set shiftround
 "  set preserveindent
+set list
+set listchars=lead:·,trail:·
 
 " Dectecting filetype & indentation of the file
 filetype plugin indent on
