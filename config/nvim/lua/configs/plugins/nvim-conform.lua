@@ -3,11 +3,6 @@ local conform = require("conform")
 
 function M.setup()
   conform.setup({
-    -- format = {
-    --   async = false,
-    --   quiet = false,
-    --   lsp_fallback = true
-    -- },
     format_on_save = {
       timeout_ms = 500,
       lsp_fallback = true
@@ -23,6 +18,7 @@ function M.setup()
       html = { "prettierd" },
       css = { "prettierd" },
       markdown = { "prettierd" },
+      sh = { "shellcheck", "shfmt" }
     },
   })
 end
