@@ -27,7 +27,7 @@ function M.setup()
     },
   })
 
-  -- lsp_format.setup()
+  lsp_format.setup()
 
   mason_lsp.setup_handlers({
     function(server_name) -- default handler (optional)
