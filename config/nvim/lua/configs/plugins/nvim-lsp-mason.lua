@@ -13,6 +13,9 @@ function M.setup()
         package_uninstalled = "✗",
       },
     },
+
+    -- Prefer native LSPs (if avail)
+    PATH = "append",
   })
 
   mason_lsp.setup({

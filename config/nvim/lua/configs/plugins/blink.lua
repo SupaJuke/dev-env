@@ -15,9 +15,16 @@ function M.setup()
     -- default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, via `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
+      default = { 'lsp', 'path', 'snippets', 'buffer', 'markdown' },
       -- optionally disable cmdline completions
       -- cmdline = {},
+      providers = {
+        markdown = {
+          name = 'RenderMarkdown',
+          module = 'render-markdown.integ.blink',
+          fallbacks = { 'lsp' },
+        }
+      }
     },
 
     -- experimental signature help support

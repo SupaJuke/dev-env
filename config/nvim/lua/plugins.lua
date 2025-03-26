@@ -39,6 +39,7 @@ return {
       require("configs.plugins.nvim-treesitter").setup()
     end,
   },
+
   {
     "nvim-telescope/telescope.nvim",
     lazy = false,
@@ -103,12 +104,14 @@ return {
   {
     "neovim/nvim-lspconfig",
     lazy = false,
-    dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" }
+    dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
   },
+
   {
     "williamboman/mason.nvim",
     lazy = false,
   },
+
   {
     "williamboman/mason-lspconfig.nvim",
     lazy = false,
@@ -123,6 +126,7 @@ return {
     "lukas-reineke/lsp-format.nvim",
     lazy = false,
   },
+
   {
     "stevearc/conform.nvim",
     event = { "BufWritePre" },
@@ -143,14 +147,13 @@ return {
 
   -- Autocompletion
   {
-    -- TODO: move this into its own file
     'saghen/blink.cmp',
     lazy = false, -- lazy loading handled internally
     -- optional: provides snippets for the snippet source
     dependencies = 'rafamadriz/friendly-snippets',
 
     -- use a release tag to download pre-built binaries
-    version = 'v0.*',
+    version = '*',
     -- OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
     -- build = 'cargo build --release',
     -- If you use nix, you can build from source using latest nightly rust with:
@@ -251,4 +254,14 @@ return {
       require("nvim-web-devicons").get_icons()
     end,
   },
+
+  -- ======================= External ======================= --
+  {
+    -- TODO: change the order of the icons (i fucking hate circles -> do diamonds instead)
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {},
+  }
 }
