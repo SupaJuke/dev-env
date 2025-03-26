@@ -50,6 +50,18 @@ function M.setup()
         on_attach = lsp_format.on_attach,
       })
     end,
+
+    ["lua_ls"] = function()
+      lsp_config.lua_ls.setup({
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            }
+          }
+        }
+      })
+    end,
   })
 end
 

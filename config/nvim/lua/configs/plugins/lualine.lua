@@ -34,9 +34,14 @@ function M.setup()
         },
         'diagnostics' },
       lualine_c = { 'filename' },
-      lualine_x = { 'encoding', 'fileformat', 'filetype' },
+      lualine_x = {
+        'lsp_status',
+        'encoding',
+        { 'fileformat', symbols = { unix = vim.fn.has("macunix") and "" or "" } },
+        'filetype',
+      },
       lualine_y = { 'progress' },
-      lualine_z = { 'location' }
+      lualine_z = { 'location' },
     },
     inactive_sections = {
       lualine_a = {},

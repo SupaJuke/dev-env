@@ -5,8 +5,8 @@ function M.setup()
     highlights = {
       fill = {
         -- bg = '#1A1C1D' -- gruvbox_material_custom
-        bg = '#23292D' -- everforest
-        -- bg = 'none' -- ?
+        -- bg = '#23292D' -- everforest
+        bg = 'none' -- ?
       },
     },
     options = {
