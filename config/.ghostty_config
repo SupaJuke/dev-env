@@ -1,0 +1,27 @@
+# Theme
+# theme = Everforest Dark - Hard
+theme = Kanagawa Dragon
+# theme = gruvbox-material
+
+# Window
+window-width        = 150
+window-height       = 35
+# background-opacity  = 0.95
+
+# Font
+# font-family     = MonoLisa Nerd Font
+font-family     = Maple Mono NF
+font-size       = 15
+
+# Font features (+)
+font-feature    = calt
+font-feature    = liga
+font-feature    = ss03
+
+# Font features (-)
+font-feature    = -dlig
+
+# ETC
+shell-integration               = zsh 
+copy-on-select                  = true
+clipboard-trim-trailing-spaces  = true
