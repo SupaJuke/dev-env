@@ -2,13 +2,13 @@
   /* ===== Workbench Settings ===== */
 
   // Current colorscheme
-  "workbench.colorTheme": "Tokyo Night Storm",
+  "workbench.colorTheme": "Everforest Dark",
 
   // Available color schemes:
   // "workbench.colorTheme": "Gruvbox Material Dark",
   // "workbench.colorTheme": "Everforest Dark",
 
-  "workbench.iconTheme": "Monokai Pro Icons",
+  // "workbench.iconTheme": "Monokai Pro Icons",
   "workbench.tree.indent": 15,
   "workbench.colorCustomizations": {
     // "editorWhitespace.foreground": "#7c6f64" // gruvbox
@@ -18,12 +18,13 @@
   /* ===== Editor Settings ===== */
 
   // Font
-  "editor.fontFamily": "'Cascadia Code PL', CaskaydiaCove NF",
-  "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss20'",
-  // "editor.fontFamily": "'MonoLisa Nerd Font'",
-  // "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss20'",
-  "editor.fontSize": 14,
+  // "editor.fontFamily": "'Cascadia Code PL', CaskaydiaCove Nerd Font",
   // "editor.fontSize": 14, -- original size
+  // "editor.fontFamily": "'MonoLisa Nerd Font'",
+  // "editor.fontSize": 15.5,
+  "editor.fontFamily": "'Maple Mono NF'",
+  "editor.fontLigatures": "'calt', 'ss03'",
+  "editor.fontSize": 17,
   "editor.lineHeight": 0,
 
   // Theme
@@ -50,6 +51,7 @@
   "editor.suggestSelection": "first",
   "editor.acceptSuggestionOnCommitCharacter": false,
   "editor.bracketPairColorization.enabled": false,
+  "editor.renderWhitespace": "boundary",
   "explorer.confirmDragAndDrop": false,
 
   "todohighlight.keywords": [
@@ -62,7 +64,7 @@
     },
     {
       "text": "NOTE:",
-      "backgroundColor": "rgba(250, 220, 50, 0.6)",
+      "backgroundColor": "rgba(250, 200, 50, 0.6)",
       "color": "white",
       "isWholeLine": false,
       "border": "1px solid transparent",
@@ -72,8 +74,8 @@
 
   /* ===== Terminal Settings ===== */
 
-  "terminal.integrated.fontFamily": "'Cascadia Code PL', 'CaskaydiaCove NF'",
-  // "terminal.integrated.fontFamily": "'MonoLisa Nerd Font'",
+  // "terminal.integrated.fontFamily": "'Cascadia Code PL', 'CaskaydiaCove Nerd Font'",
+  "terminal.integrated.fontFamily": "'MonoLisa Nerd Font'",
   "terminal.integrated.fontSize": 15,
   "terminal.integrated.defaultProfile.linux": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
@@ -95,20 +97,63 @@
 
   // Latex Workshop
   // "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
-  "latex-workshop.viewer.pdf.internal.port": 34744,
+  "latex-workshop.formatting.latex": "tex-fmt",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": ["latexmk"]
+    },
+    {
+      "name": "latexmk (xelatex)",
+      "tools": ["xelatexmk"]
+    },
+    {
+      "name": "latexmk (lualatex)",
+      "tools": ["lualatexmk"]
+    },
+    {
+      "name": "latexmk (latexmkrc)",
+      "tools": ["latexmk_rconly"]
+    },
+    {
+      "name": "pdflatex -> bibtex -> pdflatex * 2",
+      "tools": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+    },
+    {
+      "name": "Compile Rnw files",
+      "tools": ["rnw2tex", "latexmk"]
+    },
+    {
+      "name": "Compile Jnw files",
+      "tools": ["jnw2tex", "latexmk"]
+    },
+    {
+      "name": "Compile Pnw files",
+      "tools": ["pnw2tex", "latexmk"]
+    },
+    {
+      "name": "tectonic",
+      "tools": ["tectonic"]
+    }
+  ],
 
   /* ===== Language Specific Settings ===== */
 
   // C & CPP
   "C_Cpp.default.cStandard": "gnu99",
-  "C_Cpp.default.cppStandard": "c++20",
+  "C_Cpp.default.cppStandard": "c++14",
   "C_Cpp.autocompleteAddParentheses": true,
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.type": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.namespace": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.lambda": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.function": "sameLine",
   "C_Cpp.vcFormat.newLine.beforeOpenBrace.block": "sameLine",
-  "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, UseTab: Always, IndentWidth: 4, TabWidth: 4, ColumnLimit: 90 }",
+  "C_Cpp.intelliSenseEngine": "disabled",
+  // "C_Cpp.clang_format_style": "{ BasedOnStyle: Google, UseTab: Always, IndentWidth: 4, TabWidth: 4, ColumnLimit: 90 }",
+  // TypeScript React
+  "[cpp]": {
+    "editor.tabSize": 2
+  },
 
   // Golang
   "go.lintTool": "golangci-lint",
@@ -157,5 +202,18 @@
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "[lua]": {
+    "editor.defaultFormatter": "sumneko.lua"
+  },
+  "workbench.editorAssociations": {
+    "*.pdf": "latex-workshop-pdf-hook"
+  },
+  "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
+
+  "[latex]": {
+    "editor.defaultFormatter": "James-Yu.latex-workshop"
+  },
+  "latex-workshop.latex.recipe.default": "lastUsed"
 }
