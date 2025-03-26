@@ -153,7 +153,7 @@ return {
     dependencies = 'rafamadriz/friendly-snippets',
 
     -- use a release tag to download pre-built binaries
-    version = '*',
+    version = 'v1.*',
     -- OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
     -- build = 'cargo build --release',
     -- If you use nix, you can build from source using latest nightly rust with:
@@ -195,19 +195,6 @@ return {
       require("configs.plugins.lualine").setup()
     end,
   },
-
-  -- {
-  --   "nvim-tree/nvim-tree.lua",
-  --   enabled = false,
-  --   lazy = false,
-  --   version = "*",
-  --   dependencies = {
-  --     "nvim-tree/nvim-web-devicons"
-  --   },
-  --   config = function()
-  --     require("configs.plugins.nvim-tree").setup()
-  --   end
-  -- },
 
   {
     "nvim-neo-tree/neo-tree.nvim",
