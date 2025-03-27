@@ -37,7 +37,7 @@ function M.setup()
       lualine_x = {
         'lsp_status',
         'encoding',
-        { 'fileformat', symbols = { unix = vim.fn.has("macunix") and "" or "" } },
+        { 'fileformat', symbols = { unix = (require("jit").arch == "arm64" and "" or "") } },
         'filetype',
       },
       lualine_y = { 'progress' },
