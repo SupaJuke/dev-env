@@ -16,8 +16,8 @@ function M.setup()
   -- vim.keymap.set("n", "<leader>fe", ":Telescope file_browser path=%:p:h select_buffer=true <CR>", { noremap = true, desc = "Telescope file explorer" })
 
   -- LSP stuffs
-  vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = "Go to Definition" })
-  vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = "Go to References" })
+  vim.keymap.set('n', '<leader>gd', builtin.lsp_definitions, { desc = "Go to Definition" })
+  vim.keymap.set('n', '<leader>gr', builtin.lsp_references, { desc = "Go to References" })
 
   -- Setup
   telescope.setup {

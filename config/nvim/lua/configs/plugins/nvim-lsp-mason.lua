@@ -4,6 +4,9 @@ local lsp_format = require("lsp-format")
 local mason = require("mason")
 local mason_lsp = require("mason-lspconfig")
 
+-- [TODO]: removed after migrated / issue closed
+local blink_cmp = require("blink.cmp")
+
 function M.setup()
   mason.setup({
     ui = {
@@ -35,19 +38,8 @@ function M.setup()
   mason_lsp.setup_handlers({
     function(server_name) -- default handler (optional)
       lsp_config[server_name].setup({
-        on_attach = lsp_format.on_attach
-      })
-    end,
-
-    ["clangd"] = function()
-      lsp_config.clangd.setup({
         on_attach = lsp_format.on_attach,
-      })
-    end,
-
-    ["gopls"] = function()
-      lsp_config.gopls.setup({
-        on_attach = lsp_format.on_attach,
+        capabilities = blink_cmp.get_lsp_capabilities()
       })
     end,
 
@@ -59,7 +51,17 @@ function M.setup()
               globals = { "vim" },
             }
           }
-        }
+        },
+        on_attach = lsp_format.on_attach,
+        capabilities = blink_cmp.get_lsp_capabilities()
+      })
+    end,
+
+    ["bashls"] = function()
+      lsp_config.bashls.setup({
+        filetypes = { "sh", "zsh" },
+        on_attach = lsp_format.on_attach,
+        capabilities = blink_cmp.get_lsp_capabilities()
       })
     end,
   })

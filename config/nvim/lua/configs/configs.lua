@@ -80,13 +80,6 @@ function M.setup()
   -- Highlight current line
   set.cursorline = true
 
-  -- Change PWD
-  -- vim.cmd('autocmd BufEnter * silent! lcd %:p:h')
-  -- autocmd("BufEnter", {
-  --   pattern = "*",
-  --   command = "silent! lcd %:p:h'"
-  -- })
-
   -- Start Neovim with Alpha and NvimTree
   local function start_nvim(data)
     -- Buffer is a directory
@@ -103,7 +96,7 @@ function M.setup()
     vim.cmd("Alpha")
     vim.cmd("Neotree show")
   end
-  autocmd({ "VimEnter" }, { callback = start_nvim })
+  vim.api.nvim_create_autocmd("VimEnter", { callback = start_nvim })
 
   -- Yanking (WSL only)
   if vim.g.os == "wsl" then
@@ -120,6 +113,11 @@ function M.setup()
       cache_enabled = 0,
     }
   end
+
+  -- LSP Virtual Text
+  vim.diagnostic.config({
+    virtual_text = true -- { current_line = true }
+  })
 end
 
 return M
