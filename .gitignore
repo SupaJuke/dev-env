@@ -5,4 +5,4 @@ config/zsh/.zsh_history
 config/zsh/.zshrc_local
 .vscode
 squashfs-root
-nvim-*
+nvim-v*

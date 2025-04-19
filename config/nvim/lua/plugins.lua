@@ -43,7 +43,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     lazy = false,
-    tag = "0.1.4",
+    -- tag = "0.1.8",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("configs.plugins.telescope").setup()
@@ -91,18 +91,8 @@ return {
 
   -- ======================= LSP ======================= --
 
-  -- === Deprecated ===
-  -- {
-  --   "neoclide/coc.nvim",
-  --   lazy = true,
-  --   event = { "BufReadPre", "BufNewFile" },
-  --   branch = "release",
-  --   config = function()
-  --     require("configs.plugins.coc").setup()
-  --   end
-  -- },
-
   -- lspconfig + mason
+  -- [TODO]: eventually migrate to native?
   {
     "neovim/nvim-lspconfig",
     lazy = false,

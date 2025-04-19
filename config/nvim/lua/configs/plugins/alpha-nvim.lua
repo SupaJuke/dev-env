@@ -82,7 +82,7 @@ function M.setup()
     dashboard.button("r", "  > Recent", "<Cmd> Telescope oldfiles <CR>"),
     dashboard.button("s", "  > Settings",
       "<Cmd> cd $HOME/.config/nvim | e lua/init.lua | :Telescope find_files <CR>"),
-    dashboard.button("z", "  > ZSH Settings", "<Cmd> e ~/.zshrc | <Cmd> cd %:p:h | pwd <CR>"),
+    dashboard.button("z", "  > ZSH Settings", "<Cmd> cd $HOME/.dev-env/config/zsh/ | e ~/.zshrc <CR>"),
     dashboard.button("q", "  > Quit NVIM", "<Cmd> qa <CR>"),
   }
 
