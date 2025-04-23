@@ -22,10 +22,19 @@ return {
   {
     "folke/tokyonight.nvim",
     -- disabled = true,
-    lazy = false,
+    lazy = true,
     priority = 1002,
     config = function()
       require("configs.plugins.tokyonight").setup()
+    end,
+  },
+
+  {
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1003,
+    config = function()
+      require("configs.plugins.kanagawa").setup()
     end,
   },
 
