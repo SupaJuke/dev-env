@@ -1,0 +1,439 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "left"
+            },
+            "id": "User.swapPane.2A0DA8E0"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "id": "User.copy.644BA8F2"
+        },
+        {
+            "command": "paste",
+            "id": "User.paste"
+        },
+        {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "up"
+            },
+            "id": "User.swapPane.6CD791B"
+        },
+        {
+            "command": "find",
+            "id": "User.find"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878"
+        },
+        {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "down"
+            },
+            "id": "User.swapPane.F747588A"
+        },
+        {
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "right"
+            },
+            "id": "User.swapPane.87C324ED"
+        }
+    ],
+    "centerOnLaunch": true,
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{963ff2f7-6aed-5ce3-9d91-90d99571f53a}",
+    "initialCols": 250,
+    "initialPosition": "100,100",
+    "initialRows": 50,
+    "keybindings": 
+    [
+        {
+            "id": null,
+            "keys": "alt+shift+d"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+c"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+insert"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "User.swapPane.2A0DA8E0",
+            "keys": "ctrl+alt+left"
+        },
+        {
+            "id": null,
+            "keys": "shift+insert"
+        },
+        {
+            "id": "User.swapPane.F747588A",
+            "keys": "ctrl+alt+down"
+        },
+        {
+            "id": "User.swapPane.6CD791B",
+            "keys": "ctrl+alt+up"
+        },
+        {
+            "id": "User.swapPane.87C324ED",
+            "keys": "ctrl+alt+right"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+1"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+9"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+2"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+3"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+7"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+4"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+5"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+6"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+alt+8"
+        }
+    ],
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "KanagawaDragon",
+            "cursorShape": "filledBox",
+            "font": 
+            {
+                "face": "Maple Mono NF",
+                "features": 
+                {
+                    "calt": 1,
+                    "ss03": 1
+                },
+                "size": 13
+            },
+            "intenseTextStyle": "all",
+            "opacity": 80,
+            "scrollbarState": "hidden",
+            "useAcrylic": true
+        },
+        "list": 
+        [
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "Windows PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": false,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{963ff2f7-6aed-5ce3-9d91-90d99571f53a}",
+                "hidden": true,
+                "name": "Ubuntu-24.04",
+                "source": "Windows.Terminal.Wsl"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#272E33",
+            "black": "#7A8478",
+            "blue": "#7FBBB3",
+            "brightBlack": "#859289",
+            "brightBlue": "#7FBBB3",
+            "brightCyan": "#83C092",
+            "brightGreen": "#A7C080",
+            "brightPurple": "#D699B6",
+            "brightRed": "#E67E80",
+            "brightWhite": "#D3C6AA",
+            "brightYellow": "#DBBC7F",
+            "cursorColor": "#D3C6AA",
+            "cyan": "#83C092",
+            "foreground": "#D3C6AA",
+            "green": "#A7C080",
+            "name": "* Everforest *",
+            "purple": "#D699B6",
+            "red": "#E67E80",
+            "selectionBackground": "#D3C6AA",
+            "white": "#D3C6AA",
+            "yellow": "#DBBC7F"
+        },
+        {
+            "background": "#1D2021",
+            "black": "#665C54",
+            "blue": "#7DAEA3",
+            "brightBlack": "#928374",
+            "brightBlue": "#7DAEA3",
+            "brightCyan": "#89B482",
+            "brightGreen": "#A9B665",
+            "brightPurple": "#D3869B",
+            "brightRed": "#EA6962",
+            "brightWhite": "#D4BE98",
+            "brightYellow": "#D8A657",
+            "cursorColor": "#665C54",
+            "cyan": "#89B482",
+            "foreground": "#D4BE98",
+            "green": "#A9B665",
+            "name": "* GruvboxMaterialHardDark *",
+            "purple": "#D3869B",
+            "red": "#EA6962",
+            "selectionBackground": "#D4BE98",
+            "white": "#D4BE98",
+            "yellow": "#D8A657"
+        },
+        {
+            "background": "#0F111A",
+            "black": "#546E7A",
+            "blue": "#82AAFF",
+            "brightBlack": "#546E7A",
+            "brightBlue": "#82AAFF",
+            "brightCyan": "#89DDFF",
+            "brightGreen": "#C3E88D",
+            "brightPurple": "#C792EA",
+            "brightRed": "#FF5370",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#FFCB6B",
+            "cursorColor": "#FFCC00",
+            "cyan": "#89DDFF",
+            "foreground": "#A5A8B4",
+            "green": "#C3E88D",
+            "name": "* MaterialOcean *",
+            "purple": "#C792EA",
+            "red": "#FF5370",
+            "selectionBackground": "#1F2233",
+            "white": "#FFFFFF",
+            "yellow": "#FFCB6B"
+        },
+        {
+            "background": "#222436",
+            "black": "#191A2A",
+            "blue": "#82AAFF",
+            "brightBlack": "#828BB8",
+            "brightBlue": "#82AAFF",
+            "brightCyan": "#86E1FC",
+            "brightGreen": "#C3E88D",
+            "brightPurple": "#C099FF",
+            "brightRed": "#FF757F",
+            "brightWhite": "#C8D3F5",
+            "brightYellow": "#FFC777",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#86E1FC",
+            "foreground": "#C8D3F5",
+            "green": "#C3E88D",
+            "name": "* Moonlight II *",
+            "purple": "#C099FF",
+            "red": "#FF757F",
+            "selectionBackground": "#FFFFFF",
+            "white": "#C8D3F5",
+            "yellow": "#FFC777"
+        },
+        {
+            "background": "#1A1B2C",
+            "black": "#414868",
+            "blue": "#7AA2F7",
+            "brightBlack": "#414868",
+            "brightBlue": "#7AA2F7",
+            "brightCyan": "#7DCFFF",
+            "brightGreen": "#73DACA",
+            "brightPurple": "#BB9AF7",
+            "brightRed": "#F7768E",
+            "brightWhite": "#C0CAF5",
+            "brightYellow": "#E0AF68",
+            "cursorColor": "#C0CAF5",
+            "cyan": "#7DCFFF",
+            "foreground": "#A9B1DC",
+            "green": "#73DACA",
+            "name": "* Tokyo Night *",
+            "purple": "#BB9AF7",
+            "red": "#F7768E",
+            "selectionBackground": "#28344A",
+            "white": "#C0CAF5",
+            "yellow": "#E0AF68"
+        },
+        {
+            "background": "#222436",
+            "black": "#444A73",
+            "blue": "#82AAFF",
+            "brightBlack": "#444A73",
+            "brightBlue": "#82AAFF",
+            "brightCyan": "#86E1FC",
+            "brightGreen": "#C3E88D",
+            "brightPurple": "#FCA7EA",
+            "brightRed": "#FF757F",
+            "brightWhite": "#C8D3F5",
+            "brightYellow": "#E0AF68",
+            "cursorColor": "#C8D3F5",
+            "cyan": "#86E1FC",
+            "foreground": "#C8D3F5",
+            "green": "#C3E88D",
+            "name": "* Tokyo Night Moon *",
+            "purple": "#FCA7EA",
+            "red": "#FF757F",
+            "selectionBackground": "#C8D3F5",
+            "white": "#C8D3F5",
+            "yellow": "#E0AF68"
+        },
+        {
+            "background": "#252632",
+            "black": "#494D6D",
+            "blue": "#7CA1F0",
+            "brightBlack": "#494D6D",
+            "brightBlue": "#7CA1F0",
+            "brightCyan": "#8FDBF2",
+            "brightGreen": "#C0DC98",
+            "brightPurple": "#F1B1E3",
+            "brightRed": "#F1828A",
+            "brightWhite": "#CBD4F2",
+            "brightYellow": "#DAAE6D",
+            "cursorColor": "#CBD4F2",
+            "cyan": "#8FDBF2",
+            "foreground": "#CBD4F2",
+            "green": "#C0DC98",
+            "name": "* Tokyo Night Palemoon *",
+            "purple": "#F1B1E3",
+            "red": "#F1828A",
+            "selectionBackground": "#CBD4F2",
+            "white": "#CBD4F2",
+            "yellow": "#DAAE6D"
+        },
+        {
+            "background": "#181616",
+            "black": "#0D0C0C",
+            "blue": "#8BA4B0",
+            "brightBlack": "#A6A69C",
+            "brightBlue": "#7FB4CA",
+            "brightCyan": "#7AA89F",
+            "brightGreen": "#87A987",
+            "brightPurple": "#8992A7",
+            "brightRed": "#E46876",
+            "brightWhite": "#C5C9C5",
+            "brightYellow": "#E6C384",
+            "cursorColor": "#C5C9C5",
+            "cyan": "#8EA4A2",
+            "foreground": "#C8C093",
+            "green": "#8A9A7B",
+            "name": "KanagawaDragon",
+            "purple": "#A292A3",
+            "red": "#C4746E",
+            "selectionBackground": "#223249",
+            "white": "#C8C093",
+            "yellow": "#C4B28A"
+        },
+        {
+            "background": "#F2ECBC",
+            "black": "#1F1F28",
+            "blue": "#4D699B",
+            "brightBlack": "#8A8980",
+            "brightBlue": "#6693BF",
+            "brightCyan": "#5E857A",
+            "brightGreen": "#6E915F",
+            "brightPurple": "#624C83",
+            "brightRed": "#D7474B",
+            "brightWhite": "#43436C",
+            "brightYellow": "#836F4A",
+            "cursorColor": "#C9CBD1",
+            "cyan": "#597B75",
+            "foreground": "#545464",
+            "green": "#6F894E",
+            "name": "KanagawaLotus",
+            "purple": "#B35B79",
+            "red": "#C84053",
+            "selectionBackground": "#B5CBD2",
+            "white": "#545464",
+            "yellow": "#77713F"
+        },
+        {
+            "background": "#1F1F28",
+            "black": "#090618",
+            "blue": "#7E9CD8",
+            "brightBlack": "#727169",
+            "brightBlue": "#7FB4CA",
+            "brightCyan": "#7AA89F",
+            "brightGreen": "#98BB6C",
+            "brightPurple": "#938AA9",
+            "brightRed": "#E82424",
+            "brightWhite": "#DCD7BA",
+            "brightYellow": "#E6C384",
+            "cursorColor": "#C8C093",
+            "cyan": "#6A9589",
+            "foreground": "#DCD7BA",
+            "green": "#76946A",
+            "name": "KanagawaWave",
+            "purple": "#957FB8",
+            "red": "#C34043",
+            "selectionBackground": "#2D4F67",
+            "white": "#C8C093",
+            "yellow": "#C0A36E"
+        }
+    ],
+    "themes": []
+}
