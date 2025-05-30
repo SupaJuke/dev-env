@@ -31,5 +31,5 @@ vim.g.os = (function()
 end)()
 
 require("lazy").setup("plugins")
-require("configs.configs").setup()
+require("configs.settings").setup()
 require("configs.keymaps").setup()

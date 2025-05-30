@@ -94,7 +94,7 @@ return {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
-      require("configs.plugins.todo-comments").setup()
+      require("configs.plugins.todo").setup()
     end,
   },
 
@@ -110,6 +110,7 @@ return {
 
   {
     "williamboman/mason.nvim",
+    tag = "v1.11.0",
     lazy = false,
   },
 

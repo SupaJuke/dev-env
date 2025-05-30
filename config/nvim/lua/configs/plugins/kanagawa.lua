@@ -11,9 +11,10 @@ function M.setup()
     statementStyle = { bold = true },
     typeStyle = {},
     transparent = false,   -- do not set background color
-    dimInactive = false,   -- dim inactive window `:h hl-NormalNC`
+    dimInactive = true,    -- dim inactive window `:h hl-NormalNC`
     terminalColors = true, -- define vim.g.terminal_color_{0,17}
     colors = {             -- add/modify theme and palette colors
+      -- Wave palette
       palette = {},
       theme = {
         wave = {},
@@ -22,9 +23,9 @@ function M.setup()
         all = {
           ui = {
             -- default doesn't exist
-            bg_gutter = "none"
+            bg_gutter = "none",
           }
-        }
+        },
       },
     },
 
@@ -32,9 +33,9 @@ function M.setup()
       return {}
     end,
 
-    theme = "dragon",  -- Load "wave" theme
-    background = {     -- map the value of 'background' option to a theme
-      dark = "dragon", -- try "dragon" !
+    theme = "wave",
+    background = {   -- map the value of 'background' option to a theme
+      dark = "wave", -- try "dragon" !
       light = "lotus"
     },
   })
