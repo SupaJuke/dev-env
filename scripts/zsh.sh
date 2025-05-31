@@ -3,8 +3,8 @@
 # Initialize Variable
 ROOT_PATH=$1
 if [[ $# -ne 1 ]]; then
-	echo "root path to repo not provided: ./$(basename $0) <root_path>"
-	exit
+    echo "root path to repo not provided: ./$(basename $0) <root_path>"
+    exit
 fi
 
 if [[ ! -d "$ROOT_PATH/config/zsh" ]]; then
@@ -29,7 +29,7 @@ if [[ -f "$HOME/.zshrc" ]]; then
 fi
 
 # Creating zshenv file
-echo "ZDOTDIR=$ROOT_PATH/config/zsh" > "$HOME/.zshenv"
+echo "ZDOTDIR=$ROOT_PATH/config/zsh" >"$HOME/.zshenv"
 
 # Symlinking
 ln -s "$ROOT_PATH/config/zsh/.zshrc" "$HOME/.zshrc"

@@ -37,7 +37,7 @@ source $ZSH/oh-my-zsh.sh
 # ------------------------------ Aliasing ------------------------------ #
 
 # Lazynvm
-source ${ZDOTDIR}/lazy_nvm.sh
+source $ZDOTDIR/lazy_nvm.sh
 
 # Put WSL specific configs below:
 if [[ $(uname -r) =~ 'WSL2' ]]; then
@@ -48,8 +48,7 @@ fi
 if [[ $OSTYPE =~ "darwin" ]] || [[ $(uname -a) =~ "wolf" ]]; then
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 elif [[ $OSTYPE =~ "linux" ]]; then
-    [ -f /usr/share/doc/fzf/examples/key-bindings.zsh ] && source /usr/share/doc/fzf/examples/key-bindings.zsh
-    [ -f /usr/share/doc/fzf/examples/completion.zsh ] && source /usr/share/doc/fzf/examples/completion.zsh
+    source <(fzf --zsh)
 fi
 
 # Fzf settings
@@ -74,7 +73,7 @@ fi
 # ------------------------------ Local Settings ------------------------ #
 
 # Sourcing local .zshrc
-source ${ZDOTDIR}/.zshrc_local
+[[ -f $ZDOTDIR/.zshrc_local ]] && source $ZDOTDIR/.zshrc_local
 
 # ----------------------- Stuffs That Need to be Here ------------------ #
 
