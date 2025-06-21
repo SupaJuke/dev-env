@@ -104,20 +104,18 @@ return {
   -- [TODO]: eventually migrate to native?
   {
     "neovim/nvim-lspconfig",
-    lazy = false,
-    dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
   },
 
   {
-    "williamboman/mason.nvim",
-    tag = "v1.11.0",
-    lazy = false,
+    "mason-org/mason.nvim",
   },
 
   {
-    "williamboman/mason-lspconfig.nvim",
-    lazy = false,
-    -- event = { "BufReadPre", "BufNewFile" },
+    "mason-org/mason-lspconfig.nvim",
+    dependencies = {
+      "mason-org/mason.nvim",
+      "neovim/nvim-lspconfig",
+    },
     config = function()
       require("configs.plugins.nvim-lsp-mason").setup()
     end,
