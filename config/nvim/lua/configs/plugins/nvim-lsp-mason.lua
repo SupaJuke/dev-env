@@ -45,7 +45,7 @@ function M.setup()
     },
   }
 
-  lsp_config['bashls'] = {
+  lsp_config["bashls"] = {
     filetypes = { "sh", "zsh" },
     on_attach = lsp_format.on_attach,
   }
