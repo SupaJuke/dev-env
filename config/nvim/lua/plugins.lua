@@ -122,10 +122,10 @@ return {
   },
 
   -- Formatters
-  {
-    "lukas-reineke/lsp-format.nvim",
-    lazy = false,
-  },
+  -- {
+  --   "lukas-reineke/lsp-format.nvim",
+  --   lazy = false,
+  -- },
 
   {
     "stevearc/conform.nvim",

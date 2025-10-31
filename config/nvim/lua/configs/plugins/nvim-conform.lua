@@ -18,7 +18,8 @@ function M.setup()
       html = { "prettierd" },
       css = { "prettierd" },
       markdown = { "prettierd" },
-      sh = { "shellcheck", "shfmt" }
+      sh = { "shellcheck", "shfmt", stop_after_first = true },
+      rust = { "rustfmt" }
     },
   })
 end

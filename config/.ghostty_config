@@ -1,7 +1,12 @@
 # Theme
-# theme = Everforest Dark - Hard
-theme = Kanagawa Dragon
-# theme = gruvbox-material
+# theme = Everforest Dark Hard
+# theme = Gruvbox Material Dark
+# theme = Kanagawa Dragon
+theme = Kanagawa Wave
+# theme = Kanagawabones
+# theme = Tokyonight
+# theme = Twilight
+# theme = Subliminal
 
 # Window
 window-width        = 150
@@ -22,6 +27,6 @@ font-feature    = ss03
 font-feature    = -dlig
 
 # ETC
-shell-integration               = zsh 
+shell-integration               = none
 copy-on-select                  = true
 clipboard-trim-trailing-spaces  = true

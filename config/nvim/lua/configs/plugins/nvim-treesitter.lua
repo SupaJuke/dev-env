@@ -19,6 +19,7 @@ function M.setup()
       "lua",
       "php",
       "python",
+      "rust",
       "sql",
       "tsx",
       "typescript",
