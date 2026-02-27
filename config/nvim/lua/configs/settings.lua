@@ -117,6 +117,9 @@ function M.setup()
   vim.diagnostic.config({
     virtual_text = true -- { current_line = true }
   })
+
+  -- Python3 Provider
+  vim.g.python3_host_prog = "/home/supa/.local/bin/pynvim-python"
 end
 
 return M
