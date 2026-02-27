@@ -3,9 +3,9 @@ local M = {}
 function M.setup()
   require("blink.cmp").setup {
     appearance = {
-      -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+      -- Set to "mono" for "Nerd Font Mono" or "normal" for "Nerd Font"
       -- Adjusts spacing to ensure icons are aligned
-      nerd_font_variant = 'mono'
+      nerd_font_variant = "mono"
     },
 
     completion = {
@@ -26,16 +26,24 @@ function M.setup()
     -- default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, via `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer', 'markdown' },
+      default = { "lsp", "path", "snippets", "buffer", "markdown", "latex_symbols" },
       -- optionally disable cmdline completions
       -- cmdline = {},
       providers = {
         markdown = {
-          name = 'RenderMarkdown',
-          module = 'render-markdown.integ.blink',
-          fallbacks = { 'lsp' },
+          name = "RenderMarkdown",
+          module = "render-markdown.integ.blink",
+          fallbacks = { "lsp" },
+        },
+        latex_symbols = {
+          name = "latex_symbols",
+          module = "blink.compat.source",
+          opt = {
+            -- 1 = julia / 2 = latex
+            strategy = 0,
+          }
         }
-      }
+      },
     },
 
     -- experimental signature help support
