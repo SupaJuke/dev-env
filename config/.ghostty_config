@@ -3,6 +3,7 @@
 # theme = Gruvbox Material Dark
 # theme = Kanagawa Dragon
 theme = Kanagawa Wave
+# theme = Everforest Light Med
 # theme = Kanagawabones
 # theme = Tokyonight
 # theme = Twilight
@@ -16,7 +17,7 @@ window-height       = 35
 # Font
 # font-family     = MonoLisa Nerd Font
 font-family     = Maple Mono NF
-font-size       = 15
+font-size       = 16
 
 # Font features (+)
 font-feature    = calt

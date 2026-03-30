@@ -119,7 +119,7 @@ function M.setup()
   })
 
   -- Python3 Provider
-  vim.g.python3_host_prog = "/home/supa/.local/bin/pynvim-python"
+  vim.g.python3_host_prog = "/Users/supa-mac/.local/bin/pynvim-python"
 end
 
 return M

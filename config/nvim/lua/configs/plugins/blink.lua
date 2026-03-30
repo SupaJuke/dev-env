@@ -38,10 +38,6 @@ function M.setup()
         latex_symbols = {
           name = "latex_symbols",
           module = "blink.compat.source",
-          opt = {
-            -- 1 = julia / 2 = latex
-            strategy = 0,
-          }
         }
       },
     },

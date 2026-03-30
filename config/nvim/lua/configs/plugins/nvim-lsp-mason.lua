@@ -20,7 +20,9 @@ function M.setup()
 
   mason_lsp.setup({
     ensure_installed = {
-      "pyright",
+      -- "pyright",
+      "ruff",
+      "ty",
       "lua_ls",
       "clangd",
       "gopls",

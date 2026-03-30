@@ -268,5 +268,16 @@ return {
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
     opts = {},
+  },
+
+  {
+    "lervag/vimtex",
+    lazy = false, -- we don't want to lazy load VimTeX
+    -- tag = "v2.15", -- uncomment to pin to a specific release
+    config = function()
+      -- VimTeX configuration goes here, e.g.
+      require("configs.plugins.vimtex").setup()
+      -- vim.g.vimtex_view_method = "zathura"
+    end
   }
 }
