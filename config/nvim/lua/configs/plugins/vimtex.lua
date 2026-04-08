@@ -2,7 +2,7 @@ local function TexFocusVim()
   -- Replace 'TERMINAL' with your terminal app name
   -- Example: vim.fn.system("open -a iTerm")
   -- Example: vim.fn.system("open -a Alacritty")
-  vim.fn.system("open -a Ghostty")
+  vim.fn.system("open -a WezTerm")
   vim.cmd("redraw!")
 end
 

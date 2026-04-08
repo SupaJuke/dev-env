@@ -10,8 +10,8 @@ theme = Kanagawa Wave
 # theme = Subliminal
 
 # Window
-window-width        = 150
-window-height       = 35
+window-width         = 150
+window-height        = 35
 # background-opacity  = 0.95
 
 # Font

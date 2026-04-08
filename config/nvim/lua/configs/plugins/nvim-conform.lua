@@ -19,9 +19,15 @@ function M.setup()
       css = { "prettierd" },
       markdown = { "prettierd" },
       sh = { "shellcheck", "shfmt", stop_after_first = true },
-      rust = {}
+      tex = { "tex-fmt" },
     },
   })
+
+  conform.formatters["tex-fmt"] = {
+    append_args = {
+      "--nowrap"
+    }
+  }
 end
 
 return M

@@ -261,14 +261,14 @@ return {
   },
 
   -- ======================= External ======================= --
-  {
-    -- TODO: change the order of the icons (i fucking hate circles -> do diamonds instead)
-    'MeanderingProgrammer/render-markdown.nvim',
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
-    ---@module 'render-markdown'
-    ---@type render.md.UserConfig
-    opts = {},
-  },
+  -- {
+  --   -- TODO: change the order of the icons (i fucking hate circles -> do diamonds instead)
+  --   'MeanderingProgrammer/render-markdown.nvim',
+  --   dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
+  --   ---@module 'render-markdown'
+  --   ---@type render.md.UserConfig
+  --   opts = {},
+  -- },
 
   {
     "lervag/vimtex",
@@ -279,5 +279,15 @@ return {
       require("configs.plugins.vimtex").setup()
       -- vim.g.vimtex_view_method = "zathura"
     end
-  }
+  },
+
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    config = function()
+      require("configs.plugins.markdown_preview").setup()
+    end,
+    ft = { "markdown" },
+  },
 }

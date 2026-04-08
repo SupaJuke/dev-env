@@ -1,6 +1,5 @@
 local M = {}
 local lsp_config = vim.lsp.config
--- local lsp_format = require("lsp-format")
 local mason = require("mason")
 local mason_lsp = require("mason-lspconfig")
 

@@ -20,6 +20,7 @@ function M.setup()
 
         let g:gruvbox_material_background = 'hard'
         " let g:gruvbox_material_disable_italic_comment = g:os ==? 'wsl' ? 1 : 0
+        let g:gruvbox_material_enable_italic = 1
         let g:gruvbox_material_transparent_background = 0
         let g:gruvbox_material_visual = 'green background'
         let g:gruvbox_material_diagnostic_text_highlight = 1

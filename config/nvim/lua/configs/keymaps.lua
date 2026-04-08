@@ -4,7 +4,7 @@ local keymap = vim.keymap.set
 function M.setup()
   -- keymap('n', '<Home>', "0")
   keymap('t', '<Esc>', [[<C-\><C-n>]], { noremap = true })
-  keymap('n', '<Esc>', ":noh<CR>", { noremap = true })
+  keymap('n', '<Esc>', ":noh<CR>", { noremap = true, silent = true })
 
   -- moving up/down the page
   keymap("n", "<C-d>", "<C-d>zz")

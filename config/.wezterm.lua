@@ -1,17 +1,12 @@
--- Pull in the wezterm API
 local wezterm = require 'wezterm'
-
--- This will hold the configuration.
 local config = wezterm.config_builder()
-
--- This is where you actually apply your config choices.
-
--- For example, changing the initial geometry for new windows:
 config.max_fps = 120
+
+-- ==================================== Fonts ==================================== --
 
 -- or, changing the font size and color scheme.
 config.font = wezterm.font({ family = "Maple Mono NF" })
-config.font_size = 14
+config.font_size = 16
 config.font_rules = {
   {
     intensity = "Bold",
@@ -36,23 +31,54 @@ config.font_rules = {
 }
 config.bold_brightens_ansi_colors = "BrightAndBold"
 
-config.color_scheme = 'Kanagawa (Gogh)'
+-- ================================= Colorschemes ================================ --
+
+config.color_schemes = {
+  ["gruvbox_material_dark_hard"] = {
+    foreground = "#D4BE98",
+    background = "#1D2021",
+    cursor_bg = "#D4BE98",
+    cursor_border = "#D4BE98",
+    cursor_fg = "#1D2021",
+    selection_bg = "#D4BE98",
+    selection_fg = "#3C3836",
+
+    ansi = { "#1d2021", "#ea6962", "#a9b665", "#d8a657", "#7daea3", "#d3869b", "#89b482", "#d4be98" },
+    brights = { "#eddeb5", "#ea6962", "#a9b665", "#d8a657", "#7daea3", "#d3869b", "#89b482", "#d4be98" },
+  },
+}
+
+-- config.color_scheme = 'Kanagawa (Gogh)'
 -- config.color_scheme = 'Tokyo Night'
--- config.color_scheme = 'Everforest Dark Hard (Gogh)'
+config.color_scheme = 'Everforest Dark (Gogh)'
+-- config.color_scheme = "gruvbox_material_dark_hard"
+
+-- ================================= Key Mapping ================================= --
+
+config.keys = {
+  {
+    key = 'w',
+    mods = 'CMD',
+    action = wezterm.action.CloseCurrentPane { confirm = true },
+  },
+  {
+    key = 'd',
+    mods = 'CMD',
+    action = wezterm.action.SplitVertical
+  },
+  {
+    key = 'd',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.SplitHorizontal
+  },
+}
+
+-- ===================================== WSL ===================================== --
 
 config.wsl_domains = {
   {
-    -- The name of this specific domain.  Must be unique amonst all types
-    -- of domain in the configuration file.
     name = 'WSL:Ubuntu',
-
-    -- The name of the distribution.  This identifies the WSL distribution.
-    -- It must match a valid distribution from your `wsl -l -v` output in
-    -- order for the domain to be useful.
     distribution = 'Ubuntu-24.04',
-
-    -- set default directory
-    -- default_cwd = "\\\\wsl.localhost\\Ubuntu-24.04\\home\\supa"
     default_cwd = os.getenv("HOME") or "/home/supa"
   },
 }
@@ -72,8 +98,25 @@ wezterm.on("gui-startup", function(cmd)
   window:gui_window():set_inner_size(width, height)
 end)
 
--- set default domain to WSL
-config.default_domain = 'WSL:Ubuntu'
+local function is_wsl()
+  -- Check env first
+  if os.getenv("WSL_DISTRO_NAME") or os.getenv("WSL_INTEROP") then
+    return true
+  end
 
--- Finally, return the configuration to wezterm:
+  -- Fallback to /proc/version
+  local f = io.open("/proc/version", "r")
+  if not f then return false end
+
+  local content = f:read("*a")
+  f:close()
+
+  return content:lower():find("microsoft") ~= nil
+end
+
+-- set default domain to WSL
+if is_wsl() then config.default_domain = 'WSL:Ubuntu' else config.default_domain = "local" end
+
+-- =============================================================================== --
+
 return config
