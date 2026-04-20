@@ -7,8 +7,8 @@ function M.setup()
   -- ==================== Theme Settings ==================== --
 
   set.termguicolors = true
-  -- vim.cmd("colorscheme gruvbox-material")
-  vim.cmd("colorscheme everforest")
+  vim.cmd("colorscheme gruvbox-material")
+  -- vim.cmd("colorscheme everforest")
   -- vim.cmd("colorscheme tokyonight-moon")
   -- vim.cmd("colorscheme kanagawa")
 

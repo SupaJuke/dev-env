@@ -68,11 +68,13 @@ return {
   {
     "nvim-telescope/telescope-file-browser.nvim",
     lazy = true,
-    dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-    config = function()
-      require("configs.plugins.telescope-file-browser").setup()
-    end,
+    -- dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    -- config = function()
+    --   require("configs.plugins.telescope-file-browser").setup()
+    -- end,
   },
+
+  { "nvim-telescope/telescope-bibtex.nvim", lazy = true },
 
   {
     "lewis6991/gitsigns.nvim",
@@ -86,7 +88,7 @@ return {
   {
     "windwp/nvim-autopairs",
     config = function()
-      require("nvim-autopairs").setup()
+      require("configs.plugins.autopairs").setup()
     end,
   },
 
@@ -105,15 +107,6 @@ return {
   -- ======================= LSP ======================= --
 
   -- lspconfig + mason
-  -- [TODO]: eventually migrate to native?
-  {
-    "neovim/nvim-lspconfig",
-  },
-
-  {
-    "mason-org/mason.nvim",
-  },
-
   {
     "mason-org/mason-lspconfig.nvim",
     dependencies = {
@@ -124,12 +117,6 @@ return {
       require("configs.plugins.nvim-lsp-mason").setup()
     end,
   },
-
-  -- Formatters
-  -- {
-  --   "lukas-reineke/lsp-format.nvim",
-  --   lazy = false,
-  -- },
 
   {
     "stevearc/conform.nvim",
@@ -149,33 +136,26 @@ return {
     end,
   },
 
-  -- Autocompletion
+  -- Including mini.pairs and mini.snippets
   {
-    'saghen/blink.compat',
-    -- use v2.* for blink.cmp v1.*
-    version = '2.*',
-    -- lazy.nvim will automatically load the plugin when it's required by blink.cmp
-    lazy = true,
-    -- make sure to set opts so that lazy.nvim calls blink.compat's setup
-    opts = {},
+    "echasnovski/mini.nvim",
+    version = false,
+    config = function()
+      require("configs.plugins.mini").setup()
+    end
   },
 
   {
     "saghen/blink.cmp",
     lazy = false, -- lazy loading handled internally
-    -- optional: provides snippets for the snippet source
     dependencies = {
+      "saghen/blink.compat",
       "rafamadriz/friendly-snippets",
       "kdheepak/cmp-latex-symbols",
-      "saghen/blink.compat"
     },
 
     -- use a release tag to download pre-built binaries
     version = 'v1.*',
-    -- OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
-    -- build = 'cargo build --release',
-    -- If you use nix, you can build from source using latest nightly rust with:
-    -- build = 'nix run .#build-plugin',
 
     config = function()
       require("configs.plugins.blink").setup()
@@ -183,11 +163,6 @@ return {
   },
 
   -- ========================== UI ========================== --
-
-  {
-    "echasnovski/mini.nvim",
-    version = false,
-  },
 
   {
     "folke/which-key.nvim",
@@ -261,23 +236,14 @@ return {
   },
 
   -- ======================= External ======================= --
-  -- {
-  --   -- TODO: change the order of the icons (i fucking hate circles -> do diamonds instead)
-  --   'MeanderingProgrammer/render-markdown.nvim',
-  --   dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
-  --   ---@module 'render-markdown'
-  --   ---@type render.md.UserConfig
-  --   opts = {},
-  -- },
 
   {
     "lervag/vimtex",
     lazy = false, -- we don't want to lazy load VimTeX
     -- tag = "v2.15", -- uncomment to pin to a specific release
+    dependencies = { "micangl/cmp-vimtex", },
     config = function()
-      -- VimTeX configuration goes here, e.g.
       require("configs.plugins.vimtex").setup()
-      -- vim.g.vimtex_view_method = "zathura"
     end
   },
 

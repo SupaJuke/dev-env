@@ -17,7 +17,6 @@ function M.setup()
     highlight = {
       keyword = "wide_fg",
       after = "",
-      -- TODO: change this so that it's usable with the ligature
       pattern = [[\s\[(KEYWORDS)\]:]]
     },
     search = {

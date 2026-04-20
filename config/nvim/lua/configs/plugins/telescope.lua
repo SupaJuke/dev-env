@@ -9,7 +9,7 @@ function M.setup()
   vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = "Telescope help" })
   vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = "Telescope find recent" })
   vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = "Telescope diagnostics" })
-  vim.keymap.set('n', '<leader>ft', ":TodoTelescope<CR>", { desc = "Telescope todos" })
+  vim.keymap.set('n', '<leader>ft', ":TodoTelescope<CR>", { desc = "Telescope todos", silent = true })
   vim.keymap.set('n', '<leader>fe', function()
     telescope.extensions.file_browser.file_browser()
   end, { desc = "Telescope file browser" })
@@ -37,6 +37,7 @@ function M.setup()
 
   telescope.load_extension('fzf')
   telescope.load_extension('file_browser')
+  telescope.load_extension("bibtex")
 end
 
 return M

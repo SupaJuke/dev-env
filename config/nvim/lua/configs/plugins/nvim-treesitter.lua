@@ -16,6 +16,7 @@ function M.setup()
       "html",
       "javascript",
       "json",
+      -- "latex",
       "lua",
       "php",
       "python",
